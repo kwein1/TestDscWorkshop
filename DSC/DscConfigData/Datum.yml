@@ -2,6 +2,7 @@ ResolutionPrecedence:
   - AllNodes\$($Node.Environment)\$($Node.NodeName)
   - Environment\$($Node.Environment)
   - Locations\$($Node.Location)
+  # Do we need to add FireSections here? KW 12/18/20
   - Roles\$($Node.Role)
   - Roles\ServerBaseline
   - Roles\DscBaseline

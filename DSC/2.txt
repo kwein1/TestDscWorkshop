@@ -1,0 +1,1263 @@
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\kevin.weinrich>powershell
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\kevin.weinrich> Get-ModuleFromFolder c:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules
+
+
+    Directory: C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules
+
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Manifest   2.4.1.0    cChoco
+Script     0.0.79     chocolatey                          {Add-ChocolateyPin, Compare-SemVerVersion, Disable-ChocolateyFeature, Disable-Chocolatey...
+Manifest   8.4.0      ComputerManagementDsc
+Script     0.0.42     DscBuildHelpers                     {Clear-CachedDscResource, Compress-DscResourceModule, Find-ModuleToPublish, Get-DscFaile...
+Script     0.7.2      JeaDsc                              ConvertTo-Expression
+Manifest   2.10.0.0   SecurityPolicyDsc
+Manifest   5.0.1      StorageDsc
+Script     1.9.0.0    xDSCResourceDesigner                {New-xDscResourceProperty, New-xDscResource, Update-xDscResource, Test-xDscResource...}
+Script     9.1.0      xPSDesiredStateConfiguration        {Publish-DscModuleAndMof, Publish-ModulesAndChecksum, Publish-MofsInSource, Publish-Modu...
+
+
+PS C:\Users\kevin.weinrich> mstsc /v:v26267ncec202
+PS C:\Users\kevin.weinrich> exit
+
+C:\Users\kevin.weinrich>e:
+
+E:\>cd \chiz\DSC\Try2\DscWorkshop\DSC
+
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC>powershell
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> $pssession = new-pssession v26267ncec201
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> Push-DscConfiguration -session $pssession -MOF E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec201.mof
+ `
+>>  -DSCBuildOutputModules E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew -RemoteStagingPath C:\temp -Verbose `
+>>  -WithModule (Get-ModuleFromFolder c:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules)
+
+Confirm
+Are you sure you want to perform this action?
+Performing the operation "Applying MOF E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec201.mof" on target "v26267ncec201".
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): a
+VERBOSE: Module match: cChoco
+VERBOSE: Module match: chocolatey
+VERBOSE: Module match: ComputerManagementDsc
+VERBOSE: Module match: DscBuildHelpers
+VERBOSE: Module match: JeaDsc
+VERBOSE: Module match: NetworkingDsc
+VERBOSE: Module match: SecurityPolicyDsc
+VERBOSE: Module match: StorageDsc
+VERBOSE: Module match: xDSCResourceDesigner
+VERBOSE: Module match: xPSDesiredStateConfiguration
+VERBOSE: The Missing modules are
+VERBOSE: looking for missing zip modules in E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+
+
+    Directory: E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       12/18/2020  12:10 PM                ModulesNew
+VERBOSE: Expanding C:\temp/*.zip to C:\Program Files\Common Files\WindowsPowerShell\Modules\cChoco chocolatey ComputerManagementDsc DscBuildHelpers
+JeaDsc NetworkingDsc SecurityPolicyDsc StorageDsc xDSCResourceDesigner xPSDesiredStateConfiguration\2.4.1.0 0.0.79 8.4.0 0.0.42 0.7.2 8.1.0 2.10.0.0
+5.0.1 1.9.0.0 9.1.0
+VERBOSE: Removing previously pushed configuration documents
+VERBOSE: Attempting to apply C:\temp\localhost.mof on v26267ncec201
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC201 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The destination object was
+found and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders] The destination object was found and
+no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test::[FilesAndFolders]FilesAndFolders] The destination object was found and no action
+is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The network path was not found.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The path cannot point to the root
+directory or to the root of a net share.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The destination object was found and no
+action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]  in 1.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Test-TargetResource is
+ starting for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Get-TargetResource is
+starting for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The registry key at
+path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters exists.
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The registry key at
+path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters has a value named NtpServer.
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Get-TargetResource has
+ finished for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The registry key at
+path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters has a value named NtpServer.
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The type of the value
+NtpServer under the registry key at path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters does not match the expected type.
+Expected DWord but was String.
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Test-TargetResource
+has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]  in 0.2500 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Set-TargetResource is
+starting for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The registry key at
+path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters exists.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]  in 0.1410 seconds.
+PowerShell DSC resource DSC_xRegistryResource  failed to execute Set-TargetResource functionality with error message: Exception calling "Parse" with
+"1" argument(s): "Input string was not in a correct format."
+    + CategoryInfo          : InvalidOperation: (:) [], CimException
+    + FullyQualifiedErrorId : ProviderOperationExecutionFailure
+    + PSComputerName        : v26267ncec201
+
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> Push-DscConfiguration -session $pssession -MOF E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec201.mof
+ `
+>>  -DSCBuildOutputModules E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew -RemoteStagingPath C:\temp -Verbose `
+>>  -WithModule (Get-ModuleFromFolder c:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules)
+
+Confirm
+Are you sure you want to perform this action?
+Performing the operation "Applying MOF E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec201.mof" on target "v26267ncec201".
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): a
+VERBOSE: Module match: cChoco
+VERBOSE: Module match: chocolatey
+VERBOSE: Module match: ComputerManagementDsc
+VERBOSE: Module match: DscBuildHelpers
+VERBOSE: Module match: JeaDsc
+VERBOSE: Module match: NetworkingDsc
+VERBOSE: Module match: SecurityPolicyDsc
+VERBOSE: Module match: StorageDsc
+VERBOSE: Module match: xDSCResourceDesigner
+VERBOSE: Module match: xPSDesiredStateConfiguration
+VERBOSE: The Missing modules are
+VERBOSE: looking for missing zip modules in E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+
+
+    Directory: E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       12/18/2020  12:24 PM                ModulesNew
+VERBOSE: Expanding C:\temp/*.zip to C:\Program Files\Common Files\WindowsPowerShell\Modules\cChoco chocolatey ComputerManagementDsc DscBuildHelpers
+JeaDsc NetworkingDsc SecurityPolicyDsc StorageDsc xDSCResourceDesigner xPSDesiredStateConfiguration\2.4.1.0 0.0.79 8.4.0 0.0.42 0.7.2 8.1.0 2.10.0.0
+5.0.1 1.9.0.0 9.1.0
+VERBOSE: Removing previously pushed configuration documents
+VERBOSE: Attempting to apply C:\temp\localhost.mof on v26267ncec201
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC201 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The destination object was
+found and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]  in 0.0320 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders] The destination object was found and
+no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test::[FilesAndFolders]FilesAndFolders] The destination object was found and no action
+is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The network path was not found.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The path cannot point to the root
+directory or to the root of a net share.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The destination object was found and no
+action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]  in 1.0300 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Begin executing Test functionality
+on the FS-SMB1 feature.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Perform operation 'Enumerate
+CimInstances' with following parameters, ''namespaceName' = root\cimv2,'className' = Win32_OperatingSystem'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Operation 'Enumerate CimInstances'
+complete.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psd1'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading 'FormatsToProcess' from path
+ 'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\Feature.format.ps1xml'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psm1'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Get-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Install-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Uninstall-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Disable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Enable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Add-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Remove-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Querying for feature FS-SMB1 using
+Server Manager cmdlet Get-WindowsFeature.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+started: FS-SMB1
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+succeeded: FS-SMB1
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] End executing Test functionality on
+the FS-SMB1 feature.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]  in 0.7190 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase] Testing the
+current execution policy for 'LocalMachine' is 'RemoteSigned'.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]  in 0.0620
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase] Testing
+contoso\Administrator is present on policy Deny_log_on_locally
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]  in 0.4690
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Testing
+Administrators,Backup Operators is present on policy Allow_log_on_locally
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]  in 0.2190 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: File-Services
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: File-Services
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-FileServer
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-FileServer
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-BranchCache
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-BranchCache
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-Data-Deduplication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-Data-Deduplication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-DFS-Namespace
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-DFS-Namespace
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-DFS-Replication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-DFS-Replication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-Resource-Manager
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-Resource-Manager
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-VSS-Agent
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-VSS-Agent
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-iSCSITarget-Server
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-iSCSITarget-Server
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: iSCSITarget-VSS-VDS
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: iSCSITarget-VSS-VDS
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-NFS-Service
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-NFS-Service
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-SyncShareService
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-SyncShareService
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]  in 3.5780 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: Telnet-Client
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: Telnet-Client
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]  in 0.3130 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource:
+Checking the IP Address.
+VERBOSE: [V26267NCEC201]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource: IP
+Address is in desired state.
+VERBOSE: [V26267NCEC201]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource:
+Prefix Length is in desired state.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]  in 1.6250 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]:                            [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Checking the Default Gateway Address.
+VERBOSE: [V26267NCEC201]:                            [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Default gateway is correct.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]  in
+0.0790 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Checking the DNS server addresses.
+VERBOSE: [V26267NCEC201]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Getting staticly assigned DNS server IPv4 address for interface alias 'Production'.
+VERBOSE: [V26267NCEC201]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Statically assigned DNS server IPv4 address for interface alias 'Production' is '134.67.208.5,161.80.76.28'.
+VERBOSE: [V26267NCEC201]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: DNS server addresses are set correctly.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.1090
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Testing NetBIOS
+configuration for Interface 'Production'.
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Getting NetBIOS
+configuration for Interface 'Production'.
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_NetworkAdapter WHERE
+NetConnectionID="Production",'queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Query
+CimInstances' complete.
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Interface 'Production'
+ detected with Index number 8.
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Enumerate Associated CimInstances' with following parameters, ''sourceRole' = ,'sourceInstance' = Win32_NetworkAdapter: [00000001] vmxnet3 Ethernet
+Adapter (DeviceID = "1"),'associationClassName' = ,'namespaceName' = root/cimv2,'resultClassName' = Win32_NetworkAdapterConfiguration,'resultRole' =
+'.
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Enumerate
+Associated CimInstances' complete.
+VERBOSE: [V26267NCEC201]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Current NetBIOS
+configuration for Interface 'vmxnet3 Ethernet Adapter' is 'Disable'.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.2970 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]:                            [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Testing WINS settings.
+VERBOSE: [V26267NCEC201]:                            [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-TargetResource: Getting WINS settings.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.0470
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowMode.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowMode.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]  in
+0.3590 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MonitorInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MonitorInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]  in 0.0150
+ seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+in 0.0310 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]  in 0.0940
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]  in
+0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named ControllerInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named ControllerInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]  in
+0.0310 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named WriteTranscripts.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named WriteTranscripts.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController] The registry key
+ at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController] The registry key
+ at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaxLcmRuntime.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController] The registry key
+ at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaxLcmRuntime.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]  in 0.0150
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named SendDscTaggingData.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named SendDscTaggingData.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[File]DscLcmControllerScript::[DscLcmController]DscLcmController] The destination object was
+found and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Testing scheduled task
+'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Getting current scheduled
+ task values for task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Task 'DscLcmController'
+found in '\DscController\'. Retrieving settings, first action, first trigger and repetition settings.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Detected schedule type
+'Once' for first trigger.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Current scheduled task
+values for task 'DscLcmController' in '\DscController\' retrieved.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Testing DSC parameter
+state.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] NOTMATCH: Value (type
+'System.String') for property 'StartTime' does not match. Current state is '2020-12-18T12:05:02' and desired state is '2020-12-18T12:23:34'.
+(DRC0021)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'ActionExecutable' does match. Current state is 'C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe' and desired
+ state is 'C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'ActionArguments' does match. Current state is '-File C:\ProgramData\Dsc\LcmController\LcmController.ps1' and desired
+state is '-File C:\ProgramData\Dsc\LcmController\LcmController.ps1'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'TaskPath' does match. Current state is '\DscController\' and desired state is '\DscController\'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'RepeatInterval' does match. Current state is '00:05:00' and desired state is '00:05:00'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'ScheduleType' does match. Current state is 'Once' and desired state is 'Once'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'LogonType' does match. Current state is 'ServiceAccount' and desired state is 'ServiceAccount'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'TaskName' does match. Current state is 'DscLcmController' and desired state is 'DscLcmController'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'RepetitionDuration' does match. Current state is 'Indefinitely' and desired state is 'Indefinitely'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Test-DscParameter result
+is 'False'. (DRC0026)
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]  in 1.0620 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Setting scheduled task
+'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Getting current scheduled
+ task values for task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Task 'DscLcmController'
+found in '\DscController\'. Retrieving settings, first action, first trigger and repetition settings.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Detected schedule type
+'Once' for first trigger.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Current scheduled task
+values for task 'DscLcmController' in '\DscController\' retrieved.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Configuring trigger
+repetition.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating
+MSFT_TaskRepetitionPattern CIM instance to configure repetition in trigger.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating temporary
+trigger to get MSFT_TaskRepetitionPattern CIM instance.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating scheduled task
+principal for account 'NT AUTHORITY\SYSTEM' using logon type 'ServiceAccount'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Retrieving the scheduled
+task 'DscLcmController' from '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating new scheduled
+task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Setting repetition
+trigger settings on task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Updating scheduled task
+'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]  in 1.2030 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in 0.0630
+ seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named StartTime.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named StartTime.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in 0.0150
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]StartTime_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named Timespan.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named Timespan.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]Timespan_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named DayOfWeek.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named DayOfWeek.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in 0.0150
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DayOfWeek_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] Test-TargetResource
+is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] Get-TargetResource is
+ starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry key at
+path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry key at
+path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named On.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] Get-TargetResource
+has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The registry key at
+path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always has a value named On.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] Test-TargetResource
+has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\Always
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]On_Always::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Version.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Version.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Test-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]  in 0.0310 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Environment.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Environment.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Test-TargetResource has finished for
+Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]  in 0.1090 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named GitCommitId.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named GitCommitId.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Test-TargetResource has finished for
+Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]  in 0.0320 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildDate.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildDate.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The value BuildDate under the registry key at
+path HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging does not match the expected value. Expected System.String[] but was System.Object[].
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Test-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]  in 0.0310 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Set-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Overwriting the value BuildDate under the
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Set-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]  in 0.0310 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildNumber.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildNumber.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Test-TargetResource has finished for
+Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic]
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Validating Path:
+C:\Program Files\WindowsPowerShell\Modules\DscDiagnostics\RoleCapabilities\ReadDiagnosticsRole.psrc
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Checking file extension
+is psrc for: C:\Program Files\WindowsPowerShell\Modules\DscDiagnostics\RoleCapabilities\ReadDiagnosticsRole.psrc
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Checking parent forlder
+is RoleCapabilities for: C:\Program Files\WindowsPowerShell\Modules\DscDiagnostics\RoleCapabilities\ReadDiagnosticsRole.psrc
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Path is a valid psrc
+path. Returning true.
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Path' does match. Current state is 'C:\Program
+Files\WindowsPowerShell\Modules\DscDiagnostics\RoleCapabilities\ReadDiagnosticsRole.psrc' and desired state is 'C:\Program
+Files\WindowsPowerShell\Modules\DscDiagnostics\RoleCapabilities\ReadDiagnosticsRole.psrc'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Comparing values in
+property 'VisibleFunctions'. (DRC0028)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [0] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscConfigurationVersion' and desired state is
+'Get-DscConfigurationVersion'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [1] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscLcmControllerLog' and desired state is
+'Get-DscLcmControllerLog'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [2] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscLcmControllerSettings' and desired state is
+'Get-DscLcmControllerSettings'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [3] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscLocalConfigurationManager' and desired state is
+'Get-DscLocalConfigurationManager'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [4] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscOperationalEventLog' and desired state is
+'Get-DscOperationalEventLog'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [5] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscTraceInformation' and desired state is
+'Get-DscTraceInformation'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [6] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Start-DscConfiguration' and desired state is 'Start-DscConfiguration'.
+ (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [7] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Stop-DscLocalConfigurationManager' and desired state is
+'Stop-DscLocalConfigurationManager'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [8] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Test-DscConfiguration' and desired state is 'Test-DscConfiguration'.
+(DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [9] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Update-DscConfiguration' and desired state is
+'Update-DscConfiguration'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Comparing values in
+property 'FunctionDefinitions'. (DRC0028)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscTraceInformation' and desired state is 'Get-DscTraceInformation'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscTraceInformation' and desired state is 'Get-DscTraceInformation'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscOperationalEventLog' and desired state is 'Get-DscOperationalEventLog'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscOperationalEventLog' and desired state is 'Get-DscOperationalEventLog'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLcmControllerSettings' and desired state is 'Get-DscLcmControllerSettings'.
+ (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLcmControllerSettings' and desired state is 'Get-DscLcmControllerSettings'.
+ (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Stop-DscLocalConfigurationManager' and desired state is
+'Stop-DscLocalConfigurationManager'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Stop-DscLocalConfigurationManager' and desired state is
+'Stop-DscLocalConfigurationManager'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLocalConfigurationManager' and desired state is
+'Get-DscLocalConfigurationManager'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLocalConfigurationManager' and desired state is
+'Get-DscLocalConfigurationManager'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscConfigurationVersion' and desired state is 'Get-DscConfigurationVersion'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscConfigurationVersion' and desired state is 'Get-DscConfigurationVersion'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Test-DscConfiguration' and desired state is 'Test-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Test-DscConfiguration' and desired state is 'Test-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Update-DscConfiguration' and desired state is 'Update-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Update-DscConfiguration' and desired state is 'Update-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Start-DscConfiguration' and desired state is 'Start-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Start-DscConfiguration' and desired state is 'Start-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLcmControllerLog' and desired state is 'Get-DscLcmControllerLog'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLcmControllerLog' and desired state is 'Get-DscLcmControllerLog'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Path' does match. Current state is 'C:\Program
+Files\WindowsPowerShell\Modules\DscDiagnostics\RoleCapabilities\ReadDiagnosticsRole.psrc' and desired state is 'C:\Program
+Files\WindowsPowerShell\Modules\DscDiagnostics\RoleCapabilities\ReadDiagnosticsRole.psrc'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Comparing values in
+property 'VisibleFunctions'. (DRC0028)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [0] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscConfigurationVersion' and desired state is
+'Get-DscConfigurationVersion'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [1] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscLcmControllerLog' and desired state is
+'Get-DscLcmControllerLog'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [2] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscLcmControllerSettings' and desired state is
+'Get-DscLcmControllerSettings'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [3] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscLocalConfigurationManager' and desired state is
+'Get-DscLocalConfigurationManager'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [4] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscOperationalEventLog' and desired state is
+'Get-DscOperationalEventLog'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [5] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Get-DscTraceInformation' and desired state is
+'Get-DscTraceInformation'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [6] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Start-DscConfiguration' and desired state is 'Start-DscConfiguration'.
+ (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [7] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Stop-DscLocalConfigurationManager' and desired state is
+'Stop-DscLocalConfigurationManager'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [8] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Test-DscConfiguration' and desired state is 'Test-DscConfiguration'.
+(DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value [9] (type
+'System.String') for property 'VisibleFunctions' does match. Current state is 'Update-DscConfiguration' and desired state is
+'Update-DscConfiguration'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Comparing values in
+property 'FunctionDefinitions'. (DRC0028)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscTraceInformation' and desired state is 'Get-DscTraceInformation'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscOperationalEventLog' and desired state is 'Get-DscOperationalEventLog'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLcmControllerSettings' and desired state is 'Get-DscLcmControllerSettings'.
+ (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Stop-DscLocalConfigurationManager' and desired state is
+'Stop-DscLocalConfigurationManager'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLocalConfigurationManager' and desired state is
+'Get-DscLocalConfigurationManager'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscConfigurationVersion' and desired state is 'Get-DscConfigurationVersion'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Test-DscConfiguration' and desired state is 'Test-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Update-DscConfiguration' and desired state is 'Update-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Start-DscConfiguration' and desired state is 'Start-DscConfiguration'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'Name' does match. Current state is 'Get-DscLcmControllerLog' and desired state is 'Get-DscLcmControllerLog'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic] Test-DscParameter result
+ is 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic]  in 0.9540 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[JeaRoleCapabilities]ReadDiagnosticRole::[DscDiagnostic]DscDiagnostic]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic]
+WARNING: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic]
+'GroupManagedServiceAccount' and 'RunAsVirtualAccount' are not defined, setting 'RunAsVirtualAccount' to 'true'.
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'RoleCapabilities' does match. Current state is 'ReadDiagnosticsRole' and desired state is 'ReadDiagnosticsRole'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'RoleCapabilities' does match. Current state is 'ReadDiagnosticsRole' and desired state is 'ReadDiagnosticsRole'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'RoleCapabilities' does match. Current state is 'ReadDiagnosticsRole' and desired state is 'ReadDiagnosticsRole'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'SessionType' does match. Current state is 'RestrictedRemoteServer' and desired state is 'RestrictedRemoteServer'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Comparing values in
+property 'ModulesToImport'. (DRC0028)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value [0] (type
+'System.String') for property 'ModulesToImport' does match. Current state is 'PSDesiredStateConfiguration' and desired state is
+'PSDesiredStateConfiguration'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value [1] (type
+'System.String') for property 'ModulesToImport' does match. Current state is 'xDscDiagnostics' and desired state is 'xDscDiagnostics'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.Boolean') for property 'RunAsVirtualAccount' does match. Current state is 'True' and desired state is 'True'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Starting with a reverse
+check. (DRC0027)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'RoleCapabilities' does match. Current state is 'ReadDiagnosticsRole' and desired state is 'ReadDiagnosticsRole'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.String') for property 'SessionType' does match. Current state is 'RestrictedRemoteServer' and desired state is 'RestrictedRemoteServer'.
+(DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Comparing values in
+property 'ModulesToImport'. (DRC0028)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value [0] (type
+'System.String') for property 'ModulesToImport' does match. Current state is 'PSDesiredStateConfiguration' and desired state is
+'PSDesiredStateConfiguration'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value [1] (type
+'System.String') for property 'ModulesToImport' does match. Current state is 'xDscDiagnostics' and desired state is 'xDscDiagnostics'. (DRC0025)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] MATCH: Value (type
+'System.Boolean') for property 'RunAsVirtualAccount' does match. Current state is 'True' and desired state is 'True'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]:                            [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic] Test-DscParameter result is
+ 'True'. (DRC0026)
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic]  in 0.8750 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[JeaSessionConfiguration]DscEndpoint::[DscDiagnostic]DscDiagnostic]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]    in  15.8570 seconds.
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Time taken for configuration job to complete is 16.117 seconds
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC>

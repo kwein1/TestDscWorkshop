@@ -3,9 +3,9 @@ Configurations:
   #- RegistryValues
   #- Disks
 
-WindowsFeatures:
-  Name:
-    - File-Services
+#WindowsFeatures:
+#  Name:
+#    - File-Services
 
 FilesAndFolders:
   Items:
@@ -23,17 +23,8 @@ FilesAndFolders:
       SourcePath: \\DSCDC01\SYSVOL\contoso.com\Policies
       Type: Directory
 
-#RegistryValues:
-#  Values:
-#    - Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
-#      ValueName: NtpServer
-#      ValueData: pool.contoso.local,0x2
-#      ValueType: DWORD
-#      Ensure: Present
-      #Force: true
-
-SecurityBaseline:
-  Role: FileServer
+#SecurityBaseline:
+#  Role: FileServer
 
   # The parameter under Disks must match, by name, what's in Disks.schema.psm1
   # Renaming from DiskLayout to Disks worked!

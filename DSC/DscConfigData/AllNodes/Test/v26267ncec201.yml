@@ -1,0 +1,20 @@
+NodeName: v26267ncec201
+Environment: Test
+Role: FileServer
+Description: '[Command=(Import-Csv -Path $env:BHProjectPath\DscConfigData\ExternalData.csv -Delimiter ";" | Where-Object ComputerName -eq v26267ncec201).Description]'
+Location: Frankfurt
+
+# This is required
+NetworkIpConfiguration:
+  IpAddress: 134.67.216.198
+  Gateway: 134.67.216.1
+  # Pulled from Get-NetIPAddress:
+  InterfaceAlias: Production
+
+PSDscAllowPlainTextPassword: True
+PSDscAllowDomainUser: True
+
+LcmConfig:
+  ConfigurationRepositoryWeb:
+    Server:
+      ConfigurationNames: v26267ncec201

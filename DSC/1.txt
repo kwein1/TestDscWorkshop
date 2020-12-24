@@ -1,0 +1,2182 @@
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Build.ps1
+Current Process ID is '30100'
+Current Process ID is '30100'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 3:29:06 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0200062
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.1890100
+Task /./SetPsModulePath/DownloadDependencies skipped.
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:01.3160845
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 2
+Done /./LoadDatumConfigData 00:00:00.6180445
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Tests completed in 3.79s
+Tests Passed: 37, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:04.8043037
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0189948
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 2 nodes.
+Done /./CompileDatumRsop 00:00:01.7201117
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:35.6052800
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncdsc01 : v26267ncdsc01 : MOF__0.0.0 Test
+    v26267ncdsc01 : BasicServer ::> FilesAndFolders ................................................OK
+    v26267ncdsc01 : BasicServer ::> SecurityBase ...................................................OK
+    v26267ncdsc01 : BasicServer ::> WindowsFeatures ................................................OK
+    v26267ncdsc01 : BasicServer ::> NetworkIpConfiguration .........................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmController ...............................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmMaintenanceWindows .......................................OK
+    v26267ncdsc01 : BasicServer ::> DscTagging .....................................................OK
+    v26267ncdsc01 : BasicServer ::> DscDiagnostic ..................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec201 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec201 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec201 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec201 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec201 : FileServer ::> DscDiagnostic ...................................................OK
+Successfully compiled 2 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:35.2292622
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+Successfully compiled 2 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:01.4790934
+Done /. 00:01:21.1602129
+Build succeeded. 11 tasks, 0 errors, 0 warnings 00:01:21.4822332
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0280018
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:34.1351939
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0140016
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Node count: 2
+Tests completed in 345ms
+Tests Passed: 6, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.6610436
+Done /. 00:00:34.8612440
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:35.0782533
+Created 2 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              cls
+?                              True
+^                              cls
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   2
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {LcmConfig, Location, Description, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            30100
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              False
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              SilentlyContinue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 3:29:06 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT601
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL                6
+PROCESSOR_REVISION             4f01
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#122
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Build.ps1
+Current Process ID is '30100'
+Current Process ID is '30100'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 3:33:53 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0600005
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.1720104
+Task /./SetPsModulePath/DownloadDependencies skipped.
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:01.2840871
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 2
+Done /./LoadDatumConfigData 00:00:00.5930382
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Tests completed in 3.77s
+Tests Passed: 37, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:04.7502995
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0170049
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 2 nodes.
+Done /./CompileDatumRsop 00:00:01.7281083
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:36.2043272
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncdsc01 : v26267ncdsc01 : MOF__0.0.0 Test
+    v26267ncdsc01 : BasicServer ::> FilesAndFolders ................................................OK
+    v26267ncdsc01 : BasicServer ::> SecurityBase ...................................................OK
+    v26267ncdsc01 : BasicServer ::> WindowsFeatures ................................................OK
+    v26267ncdsc01 : BasicServer ::> NetworkIpConfiguration .........................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmController ...............................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmMaintenanceWindows .......................................OK
+    v26267ncdsc01 : BasicServer ::> DscTagging .....................................................OK
+    v26267ncdsc01 : BasicServer ::> DscDiagnostic ..................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec201 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec201 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec201 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec201 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec201 : FileServer ::> DscDiagnostic ...................................................OK
+Successfully compiled 2 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:35.0252530
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+Successfully compiled 2 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:01.5111049
+Done /. 00:01:21.4822308
+Build succeeded. 11 tasks, 0 errors, 0 warnings 00:01:21.8302585
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0300019
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:33.5931626
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0120043
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Node count: 2
+Tests completed in 344ms
+Tests Passed: 6, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.6400416
+Done /. 00:00:34.3142071
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:34.5322223
+Created 2 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              .\Build.ps1
+?                              True
+^                              .\Build.ps1
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   2
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {LcmConfig, Location, Description, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            30100
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              False
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              SilentlyContinue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 3:33:53 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT601
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL                6
+PROCESSOR_REVISION             4f01
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#122
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Build.ps1
+Current Process ID is '30100'
+Current Process ID is '30100'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 5:12:08 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0410052
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.2380146
+Task /./SetPsModulePath/DownloadDependencies skipped.
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:01.3890909
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 3
+Done /./LoadDatumConfigData 00:00:00.7920473
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 3
+Tests completed in 4.03s
+Tests Passed: 44, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:05.2653347
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0189919
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 3 nodes.
+Done /./CompileDatumRsop 00:00:02.5051652
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:37.3133996
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncdsc01 : v26267ncdsc01 : MOF__0.0.0 Test
+    v26267ncdsc01 : BasicServer ::> FilesAndFolders ................................................OK
+    v26267ncdsc01 : BasicServer ::> SecurityBase ...................................................OK
+    v26267ncdsc01 : BasicServer ::> WindowsFeatures ................................................OK
+    v26267ncdsc01 : BasicServer ::> NetworkIpConfiguration .........................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmController ...............................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmMaintenanceWindows .......................................OK
+    v26267ncdsc01 : BasicServer ::> DscTagging .....................................................OK
+    v26267ncdsc01 : BasicServer ::> DscDiagnostic ..................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec201 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec201 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec201 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec201 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec201 : FileServer ::> DscDiagnostic ...................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec202 : v26267ncec202 : MOF__0.0.0 Test
+    v26267ncec202 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec202 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec202 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec202 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec202 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec202 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec202 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec202 : FileServer ::> DscDiagnostic ...................................................OK
+Successfully compiled 3 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:52.2083511
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+Successfully compiled 3 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:02.2731454
+Done /. 00:01:42.1805692
+Build succeeded. 11 tasks, 0 errors, 0 warnings 00:01:42.5535920
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0440089
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:37.1783890
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0140045
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 3
+Node count: 3
+Tests completed in 351ms
+Tests Passed: 8, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.6440426
+Done /. 00:00:37.9044381
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:38.1224607
+Created 3 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              .\Build.ps1
+?                              True
+^                              .\Build.ps1
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   3
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {LcmConfig, Location, Description, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            30100
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              False
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              SilentlyContinue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 5:12:08 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT601
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL                6
+PROCESSOR_REVISION             4f01
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#122
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Build.ps1
+Current Process ID is '30100'
+Current Process ID is '30100'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 5:31:18 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0450062
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.2190115
+Task /./SetPsModulePath/DownloadDependencies skipped.
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:01.3240874
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 3
+Done /./LoadDatumConfigData 00:00:00.6830431
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 3
+Tests completed in 4.08s
+Tests Passed: 44, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:05.1403374
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0190041
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 3 nodes.
+Done /./CompileDatumRsop 00:00:02.7081728
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:36.3163332
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncdsc01 : v26267ncdsc01 : MOF__0.0.0 Test
+    v26267ncdsc01 : BasicServer ::> FilesAndFolders ................................................OK
+    v26267ncdsc01 : BasicServer ::> RegistryValues .................................................OK
+    v26267ncdsc01 : BasicServer ::> SecurityBase ...................................................OK
+    v26267ncdsc01 : BasicServer ::> WindowsFeatures ................................................OK
+    v26267ncdsc01 : BasicServer ::> NetworkIpConfiguration .........................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmController ...............................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmMaintenanceWindows .......................................OK
+    v26267ncdsc01 : BasicServer ::> DscTagging .....................................................OK
+    v26267ncdsc01 : BasicServer ::> DscDiagnostic ..................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec201 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec201 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec201 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec201 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec201 : FileServer ::> DscDiagnostic ...................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec202 : v26267ncec202 : MOF__0.0.0 Test
+    v26267ncec202 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec202 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec202 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec202 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec202 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec202 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec202 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec202 : FileServer ::> DscDiagnostic ...................................................OK
+Successfully compiled 3 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:52.4983721
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+Successfully compiled 3 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:02.1871424
+Done /. 00:01:41.2965089
+Build succeeded. 11 tasks, 0 errors, 0 warnings 00:01:41.6565331
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0400036
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:34.5102106
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0129995
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 3
+Node count: 3
+Tests completed in 358ms
+Tests Passed: 8, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.6370393
+Done /. 00:00:35.2242665
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:35.4342751
+Created 3 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              .\Build.ps1
+?                              True
+^                              .\Build.ps1
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   3
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {LcmConfig, Location, Description, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            30100
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              False
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              SilentlyContinue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 5:31:18 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT601
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL                6
+PROCESSOR_REVISION             4f01
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#122
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Build.ps1 -ResolveDependency
+Current Process ID is '30100'
+Downloading dependencies, this may take a while
+True
+Current Process ID is '30100'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 5:34:48 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0380009
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.2950212
+
+===============================================================================
+                        DOWNLOADDSCCONFIGURATIONS
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDscConfigurations.ps1:1
+
+Pull dependencies from PSDepend.DscConfigurations.psd1
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations 00:00:00.2860181
+
+===============================================================================
+                        DOWNLOADDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDependencies.ps1:3
+
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscResources 00:00:03.9212508
+Done /./SetPsModulePath/DownloadDependencies 00:00:04.2202705
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:06.0243879
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 3
+Done /./LoadDatumConfigData 00:00:00.7090540
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 3
+Tests completed in 4.15s
+Tests Passed: 44, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:05.1223217
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0189895
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 3 nodes.
+Done /./CompileDatumRsop 00:00:02.6891750
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:36.1563217
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncdsc01 : v26267ncdsc01 : MOF__0.0.0 Test
+    v26267ncdsc01 : BasicServer ::> FilesAndFolders ................................................OK
+    v26267ncdsc01 : BasicServer ::> RegistryValues .................................................OK
+    v26267ncdsc01 : BasicServer ::> SecurityBase ...................................................OK
+    v26267ncdsc01 : BasicServer ::> WindowsFeatures ................................................OK
+    v26267ncdsc01 : BasicServer ::> NetworkIpConfiguration .........................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmController ...............................................OK
+    v26267ncdsc01 : BasicServer ::> DscLcmMaintenanceWindows .......................................OK
+    v26267ncdsc01 : BasicServer ::> DscTagging .....................................................OK
+    v26267ncdsc01 : BasicServer ::> DscDiagnostic ..................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec201 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec201 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec201 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec201 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec201 : FileServer ::> DscDiagnostic ...................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec202 : v26267ncec202 : MOF__0.0.0 Test
+    v26267ncec202 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec202 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec202 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec202 : FileServer ::> NetworkIpConfiguration ..........................................OK
+    v26267ncec202 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec202 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec202 : FileServer ::> DscTagging ......................................................OK
+    v26267ncec202 : FileServer ::> DscDiagnostic ...................................................OK
+Successfully compiled 3 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:53.2624230
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+Successfully compiled 3 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:02.2091385
+Done /. 00:01:46.6788516
+Build succeeded. 14 tasks, 0 errors, 0 warnings 00:01:47.0408750
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0410072
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:34.1201927
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0130024
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 3
+Node count: 3
+Tests completed in 344ms
+Tests Passed: 8, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.8000502
+Done /. 00:00:34.9972469
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:35.2422647
+Created 3 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              .\Build.ps1
+?                              True
+^                              .\Build.ps1
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   3
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {LcmConfig, Location, Description, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            30100
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {[DownloadResourcesAndConfigurations, True]}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              True
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              SilentlyContinue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               12/17/2020 5:34:48 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT601
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+PROCESSOR_LEVEL                6
+PROCESSOR_REVISION             4f01
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#122
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\16
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC>
