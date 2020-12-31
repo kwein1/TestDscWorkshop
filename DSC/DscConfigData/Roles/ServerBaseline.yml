@@ -37,6 +37,8 @@ NetworkIpConfiguration:
   DisableNetbios: True
 
 ChocolateyPackages:
+  Software:
+    Ensure: Absent
   Packages:
   - Name: microsoft-monitoring-agent
     Ensure: Absent
