@@ -3,6 +3,8 @@ Configurations:
   #- SoftwareBaseline
   - WindowsFeatures
   - NetworkIpConfiguration
+  #- ChocolateyFeature
+  - Chocolatey
   - ChocolateyPackages
   - RegistryValues
 
@@ -36,12 +38,32 @@ NetworkIpConfiguration:
   #InterfaceAlias: Ethernet
   DisableNetbios: True
 
+Chocolatey:
+  Ensure: Present
+  #ChocolateyFeature:
+  #  Name: useFipsCompliantChecksums
+  #  Ensure: Present  # Enabled
+
+#cChocoInstaller installChoco
+#{
+#  InstallDir = "c:\choco"
+#  DependsOn = "[WindowsFeature]NetFrameworkCore"
+#}
+
 ChocolateyPackages:
   Software:
     Ensure: Present
+    #ChocolateyFeature: useFipsCompliantChecksums
+  #ChocolateyFeature:
+  #  Name: useFipsCompliantChecksums
+  #  Ensure: Present  # Enabled
   Packages:
-  - Name: microsoft-monitoring-agent
-    Ensure: Present
+  #- Name: microsoft-monitoring-agent
+  #  Ensure: Present
+  #- Name: sccm
+  #  Ensure: Present
+  #  ChocolateyOptions:
+  #    Source: .
   - Name: winrar
     Ensure: Present
     #Version: '5.90.0.20200401'
