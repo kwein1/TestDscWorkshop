@@ -1,0 +1,945 @@
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Push-DscTo.ps1 -computer v26267ncec202
+VERBOSE: Performing the operation "Start-DscConfiguration: SendMetaConfigurationApply" on target "MSFT_DSCLocalConfigurationManager".
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendMetaConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC202 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [MSFT_DSCMetaConfiguration]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]
+Registration of the Dsc Agent with the server https://dscpull01.contoso.com:8080/PSDSCPullServer.svc failed. The underlying error is: Failed to
+register Dsc Agent with AgentId CBE76C28-6003-11EB-9EA8-0050569E8E39 with the server
+https://dscpull01.contoso.com:8080/PSDSCPullServer.svc/Nodes(AgentId='CBE76C28-6003-11EB-9EA8-0050569E8E39'). .
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : RegisterDscAgentCommandFailed,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
+    + PSComputerName        : v26267ncec202
+
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Set-DscLocalConfigurationManager finished in 0.131 seconds.
+VERBOSE: Performing the operation "Applying MOF e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec202.mof" on target "v26267ncec202".
+VERBOSE: Module not found: cChoco
+VERBOSE: Module not found: chocolatey
+VERBOSE: Module not found: ComputerManagementDsc
+VERBOSE: Module not found: datum
+VERBOSE: Module not found: DscBuildHelpers
+VERBOSE: Module not found: JeaDsc
+VERBOSE: Module not found: NetworkingDsc
+VERBOSE: Module not found: powershell-yaml
+VERBOSE: Module not found: SecurityPolicyDsc
+VERBOSE: Module not found: StorageDsc
+VERBOSE: Module not found: xDscDiagnostics
+VERBOSE: Module not found: xDSCResourceDesigner
+VERBOSE: Module not found: xPSDesiredStateConfiguration
+VERBOSE: The Missing modules are cChoco, chocolatey, ComputerManagementDsc, datum, DscBuildHelpers, JeaDsc, NetworkingDsc, powershell-yaml,
+SecurityPolicyDsc, StorageDsc, xDscDiagnostics, xDSCResourceDesigner, xPSDesiredStateConfiguration
+VERBOSE: looking for missing zip modules in e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\ComputerManagementDsc\8.4.0 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\datum\0.39.0 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\DscBuildHelpers\0.0.42 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\JeaDsc\0.7.2 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\NetworkingDsc\8.1.0 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\powershell-yaml\0.4.2 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\SecurityPolicyDsc\2.10.0.0 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\StorageDsc\5.0.1 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\xDscDiagnostics\2.8.0 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\xDSCResourceDesigner\1.9.0.0 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Publishing Module C:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules\xPSDesiredStateConfiguration\9.1.0 to
+e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/cChoco_2.4.1.0.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/chocolatey_0.0.79.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/ComputerManagementDsc_8.4.0.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/datum_0.39.0.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/DscBuildHelpers_0.0.42.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/JeaDsc_0.7.2.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/NetworkingDsc_8.1.0.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/powershell-yaml_0.4.2.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/SecurityPolicyDsc_2.10.0.0.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/StorageDsc_5.0.1.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/xDscDiagnostics_2.8.0.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/xDSCResourceDesigner_1.9.0.0.zip* to C:\temp
+VERBOSE: Copying e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew/xPSDesiredStateConfiguration_9.1.0.zip* to C:\temp
+VERBOSE: Expanding C:\temp/*.zip to C:\Program Files\Common Files\WindowsPowerShell\Modules\xPSDesiredStateConfiguration\9.1.0
+VERBOSE: Removing previously pushed configuration documents
+VERBOSE: Attempting to apply C:\temp\localhost.mof on v26267ncec202
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC202 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The system cannot find the
+path specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+ C:\Test\Test-Environment.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]  in 0.0150 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The system cannot find the
+path specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+ C:\Test\Test-Environment.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders] The system cannot find the file
+specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\Test\Frankfurt.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders] The system cannot find the file
+specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\Test\Frankfurt.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test::[FilesAndFolders]FilesAndFolders] The destination object was found and no action
+is required.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The system cannot find the file
+specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\Test\Test1File1.txt.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The system cannot find the file
+specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\Test\Test1File1.txt.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The system cannot find the file
+specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\Test\Test1File2.txt.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The system cannot find the file
+specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\Test\Test1File2.txt.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The system cannot find the file specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\GpoBackup.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The network path was not found.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The path cannot point to the root
+directory or to the root of a net share.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]  in 2.3130 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The system cannot find the file specified.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+C:\GpoBackup.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The network path was not found.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The path cannot point to the root
+directory or to the root of a net share.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Begin executing Test functionality
+on the FS-SMB1 feature.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Perform operation 'Enumerate
+CimInstances' with following parameters, ''namespaceName' = root\cimv2,'className' = Win32_OperatingSystem'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Operation 'Enumerate CimInstances'
+complete.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psd1'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading 'FormatsToProcess' from path
+ 'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\Feature.format.ps1xml'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psm1'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Get-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Install-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Uninstall-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Disable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Enable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Add-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Remove-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Querying for feature FS-SMB1 using
+Server Manager cmdlet Get-WindowsFeature.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+started: FS-SMB1
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+succeeded: FS-SMB1
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] End executing Test functionality on
+the FS-SMB1 feature.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]  in 0.8130 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase] Testing the
+current execution policy for 'LocalMachine' is 'RemoteSigned'.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]  in 0.1250
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase] Testing
+contoso\Administrator is present on policy Deny_log_on_locally
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]  in 0.7190
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Testing
+Administrators,Backup Operators is present on policy Allow_log_on_locally
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] BUILTIN\Backup Operators
+does not have Privilege Allow_log_on_locally
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]  in 0.1410 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Policy:
+Allow_log_on_locally. Identity: BUILTIN\Administrators
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Granting
+Allow_log_on_locally rights to BUILTIN\Administrators,BUILTIN\Backup Operators
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Attempting to Set
+BUILTIN\Administrators,BUILTIN\Backup Operators for policy Allow_log_on_locally
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Testing
+Administrators,Backup Operators is present on policy Allow_log_on_locally
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Task successfully
+completed
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+BUILTIN\Administrators,BUILTIN\Backup Operators successfully given rights to Allow_log_on_locally policy
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]  in 1.3910 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Accounts_Rename_administrator_account
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: LocalUser
+Desired policy: a
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_text_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: In proceeding
+ and accessing U.S. Government information and information systems"," you acknowledge that you fully understand and consent to all of the
+following:,1) you are accessing U.S. Government information and information systems that are provided for official U.S. Government purposes only;  2)
+ unauthorized access to or unauthorized use of U.S. Government information or information systems is subject to criminal"," civil","
+administrative"," or other lawful action;  3) the term U.S. Government information system includes systems operated on behalf of the U.S. Government;
+  4) you have no reasonable expectation of privacy regarding any communications or information used"," transmitted"," or stored on U.S. Government
+information systems;  5) at any time"," the U.S. Government may for any lawful government purpose"," without notice"," monitor"," intercept","
+search"," and seize any authorized or unauthorized communication to or from U.S. Government information systems or information used or stored on U.S.
+ Government information systems;  6) at any time"," the U.S. Government may for any lawful government purpose"," search and seize any authorized or
+unauthorized device"," to include non-U.S. Government owned devices"," that stores U.S. Government information;  7) any communications or information
+ used"," transmitted"," or stored on U.S. Government information systems may be used or disclosed for any lawful government purpose"," including but
+not limited to"," administrative purposes"," penetration testing"," communication security monitoring"," personnel misconduct measures"," law
+enforcement"," and counterintelligence inquiries;  and 8) you may not process or store classified national security information on this computer
+system. Desired policy: Your are logging on to a secure file server
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_title_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: Government
+Warning Notice Desired policy: Secure File Server
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]  in 0.7660 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Accounts_Rename_administrator_account
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: a Desired
+policy: a
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_text_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: Your are
+logging on to a secure file server Desired policy: Your are logging on to a secure file server
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_title_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: Secure File
+Server Desired policy: Secure File Server
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Successfully update security
+option
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]  in 1.8760 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: File-Services
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: File-Services
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-FileServer
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-FileServer
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-BranchCache
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-BranchCache
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]  in 1.3910 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] Installation started...
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] Continue with installation?
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] Prerequisite processing
+started...
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] Prerequisite processing
+succeeded.
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] Installation succeeded.
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] Successfully installed the
+feature File-Services.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]  in 81.2790 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: Telnet-Client
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: Telnet-Client
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]  in 0.2810 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource:
+Checking the IP Address.
+VERBOSE: [V26267NCEC202]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource: IP
+Address is in desired state.
+VERBOSE: [V26267NCEC202]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource:
+Prefix Length is in desired state.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]  in 1.4070 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Checking the Default Gateway Address.
+VERBOSE: [V26267NCEC202]:                            [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Default gateway is correct.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]  in
+0.0470 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Checking the DNS server addresses.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Getting staticly assigned DNS server IPv4 address for interface alias 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Statically assigned DNS server IPv4 address for interface alias 'Production' is '134.67.208.5,134.67.208.10'.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: DNS server addresses are not correct. Expected "134.67.208.5,161.80.76.28", actual "134.67.208.5,134.67.208.10".
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.0940
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Set-TargetResource: Applying the DNS server addresses.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Getting staticly assigned DNS server IPv4 address for interface alias 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Statically assigned DNS server IPv4 address for interface alias 'Production' is '134.67.208.5,134.67.208.10'.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Set-TargetResource: DNS server addresses were set to the desired state.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.4070
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Testing NetBIOS
+configuration for Interface 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Getting NetBIOS
+configuration for Interface 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_NetworkAdapter WHERE
+NetConnectionID="Production",'queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Query
+CimInstances' complete.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Interface 'Production'
+ detected with Index number 10.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Enumerate Associated CimInstances' with following parameters, ''sourceRole' = ,'sourceInstance' = Win32_NetworkAdapter: [00000001] vmxnet3 Ethernet
+Adapter (DeviceID = "1"),'associationClassName' = ,'namespaceName' = root/cimv2,'resultClassName' = Win32_NetworkAdapterConfiguration,'resultRole' =
+'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Enumerate
+Associated CimInstances' complete.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Current NetBIOS
+configuration for Interface 'vmxnet3 Ethernet Adapter' is 'Default'.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.1870 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Setting NetBIOS
+configuration for Interface 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_NetworkAdapter WHERE
+NetConnectionID="Production",'queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Query
+CimInstances' complete.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Interface 'Production'
+ detected with Index number 10.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Enumerate Associated CimInstances' with following parameters, ''sourceRole' = ,'sourceInstance' = Win32_NetworkAdapter: [00000001] vmxnet3 Ethernet
+Adapter (DeviceID = "1"),'associationClassName' = ,'namespaceName' = root/cimv2,'resultClassName' = Win32_NetworkAdapterConfiguration,'resultRole' =
+'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Enumerate
+Associated CimInstances' complete.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] NetBIOS configuration
+for Interface 'vmxnet3 Ethernet Adapter' will be set to 'Disable'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Invoke CimMethod' with following parameters, ''instance' = Win32_NetworkAdapterConfiguration: [00000001] vmxnet3 Ethernet Adapter (Index =
+1),'methodName' = SetTcpipNetbios,'namespaceName' = root/cimv2'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Invoke
+CimMethod' complete.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.1410 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Testing WINS settings.
+VERBOSE: [V26267NCEC202]:                            [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-TargetResource: Getting WINS settings.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.0310
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]  in 0.3590 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Getting latest
+version of the Chocolatey package for download.
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Getting Chocolatey
+from https://chocolatey.org/api/v2/package/chocolatey/0.10.15.
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Extracting
+C:\Windows\TEMP\chocolatey\chocInstall\chocolatey.zip to C:\Windows\TEMP\chocolatey\chocInstall...
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Installing
+chocolatey on this machine.
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Loading module from
+ path 'C:\Windows\TEMP\chocolatey\chocInstall\tools\chocolateysetup.psm1'.
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Importing function
+'Initialize-Chocolatey'.
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] PATH environment
+variable does not have C:\ProgramData\chocolatey\bin in it. Adding...
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Ensuring chocolatey
+ commands are on the path.
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Ensuring
+chocolatey.nupkg is in the lib folder
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages] Installed
+Chocolatey Version:  FIPS Mode detected - run 'choco feature enable -n useFipsCompliantChecksums'  to use Chocolatey. When FIPS Mode is enabled,
+Chocolatey requires useFipsCompliantChecksums feature also be enabled. 0.10.15
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]  in 7.1600 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages] Differences =
+
+False
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]  in 0.0940
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]  in 2.4860
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Converting
+CIMInstance[] to hashtable
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] >> Converting CIM
+Pairs
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Testing whether the
+ Package sccm is Installed
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]  in 2.5170 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Converting
+CIMInstance[] to hashtable
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] >> Converting CIM
+Pairs
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+Install-ChocolateyPackage `
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]   -Name sccm)
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]   -Confirm $False)
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]   -NoProgress
+$true)
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]   -Source ORDChoco
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Starting the
+Execution...
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] choco install sccm
+-s"ORDChoco" --no-progress --verbose
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Performing the
+operation "Install" on target "sccm".
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] FIPS Mode detected
+- run 'choco feature enable -n useFipsCompliantChecksums'
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]  to use Chocolatey.
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] When FIPS Mode is
+enabled, Chocolatey requires useFipsCompliantChecksums feature also be enabled.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]  in 4.8930 seconds.
+PowerShell DSC resource ChocolateyPackage  failed to execute Set-TargetResource functionality with error message: Chocolatey Package Install Failed
+    + CategoryInfo          : InvalidOperation: (:) [], CimException
+    + FullyQualifiedErrorId : ProviderOperationExecutionFailure
+    + PSComputerName        : v26267ncec202
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Push-DscTo.ps1 -computer v26267ncec202^C
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Push-DscTo.ps1 -computer v26267ncec202
+
+
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : CBE76C28-6003-11EB-9EA8-0050569E8E39
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {NONE}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : PendingConfiguration
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec202
+PSComputerName                 : v26267ncec202
+
+VERBOSE: Performing the operation "Start-DscConfiguration: SendMetaConfigurationApply" on target "MSFT_DSCLocalConfigurationManager".
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendMetaConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC202 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [MSFT_DSCMetaConfiguration]  in 0.0150 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]
+Registration of the Dsc Agent with the server https://dscpull01.contoso.com:8080/PSDSCPullServer.svc failed. The underlying error is: Failed to
+register Dsc Agent with AgentId CBE76C28-6003-11EB-9EA8-0050569E8E39 with the server
+https://dscpull01.contoso.com:8080/PSDSCPullServer.svc/Nodes(AgentId='CBE76C28-6003-11EB-9EA8-0050569E8E39'). .
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : RegisterDscAgentCommandFailed,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
+    + PSComputerName        : v26267ncec202
+
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Set-DscLocalConfigurationManager finished in 0.38 seconds.
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : CBE76C28-6003-11EB-9EA8-0050569E8E39
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {NONE}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : PendingConfiguration
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec202
+PSComputerName                 : v26267ncec202
+
+VERBOSE: Performing the operation "Applying MOF e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec202.mof" on target "v26267ncec202".
+VERBOSE: Module match: cChoco
+VERBOSE: Module match: chocolatey
+VERBOSE: Module match: ComputerManagementDsc
+VERBOSE: Module match: datum
+VERBOSE: Module match: DscBuildHelpers
+VERBOSE: Module match: JeaDsc
+VERBOSE: Module match: NetworkingDsc
+VERBOSE: Module match: powershell-yaml
+VERBOSE: Module match: SecurityPolicyDsc
+VERBOSE: Module match: StorageDsc
+VERBOSE: Module match: xDscDiagnostics
+VERBOSE: Module match: xDSCResourceDesigner
+VERBOSE: Module match: xPSDesiredStateConfiguration
+VERBOSE: The Missing modules are
+VERBOSE: looking for missing zip modules in e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+VERBOSE: Expanding C:\temp/*.zip to C:\Program Files\Common Files\WindowsPowerShell\Modules\cChoco chocolatey ComputerManagementDsc datum
+DscBuildHelpers JeaDsc NetworkingDsc powershell-yaml SecurityPolicyDsc StorageDsc xDscDiagnostics xDSCResourceDesigner
+xPSDesiredStateConfiguration\2.4.1.0 0.0.79 8.4.0 0.39.0 0.0.42 0.7.2 8.1.0 0.4.2 2.10.0.0 5.0.1 2.8.0 1.9.0.0 9.1.0
+VERBOSE: Removing previously pushed configuration documents
+VERBOSE: Attempting to apply C:\temp\localhost.mof on v26267ncec202
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC202 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The destination object was
+found and no action is required.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders] The destination object was found and
+no action is required.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Frankfurt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test::[FilesAndFolders]FilesAndFolders] The destination object was found and no action
+is required.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The network path was not found.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The path cannot point to the root
+directory or to the root of a net share.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC202]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The destination object was found and no
+action is required.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]  in 1.0160 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Begin executing Test functionality
+on the FS-SMB1 feature.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Perform operation 'Enumerate
+CimInstances' with following parameters, ''namespaceName' = root\cimv2,'className' = Win32_OperatingSystem'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Operation 'Enumerate CimInstances'
+complete.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psd1'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading 'FormatsToProcess' from path
+ 'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\Feature.format.ps1xml'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psm1'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Get-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Install-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Uninstall-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Disable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Enable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Add-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Remove-WindowsFeature'.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Querying for feature FS-SMB1 using
+Server Manager cmdlet Get-WindowsFeature.
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+started: FS-SMB1
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+succeeded: FS-SMB1
+VERBOSE: [V26267NCEC202]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] End executing Test functionality on
+the FS-SMB1 feature.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]  in 0.5000 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase] Testing the
+current execution policy for 'LocalMachine' is 'RemoteSigned'.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]  in 0.1090
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase] Testing
+contoso\Administrator is present on policy Deny_log_on_locally
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]  in 0.4060
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Testing
+Administrators,Backup Operators is present on policy Allow_log_on_locally
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] BUILTIN\Backup Operators
+does not have Privilege Allow_log_on_locally
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]  in 0.1410 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Policy:
+Allow_log_on_locally. Identity: BUILTIN\Administrators
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Granting
+Allow_log_on_locally rights to BUILTIN\Administrators,BUILTIN\Backup Operators
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Attempting to Set
+BUILTIN\Administrators,BUILTIN\Backup Operators for policy Allow_log_on_locally
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Testing
+Administrators,Backup Operators is present on policy Allow_log_on_locally
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Task successfully
+completed
+VERBOSE: [V26267NCEC202]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+BUILTIN\Administrators,BUILTIN\Backup Operators successfully given rights to Allow_log_on_locally policy
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]  in 1.3590 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Accounts_Rename_administrator_account
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: a Desired
+policy: a
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_text_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: Your are
+logging on to a secure file server Desired policy: Your are logging on to a secure file server
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_title_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC202]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: Secure File
+Server Desired policy: Secure File Server
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]  in 0.6410 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: File-Services
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: File-Services
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-FileServer
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-FileServer
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-BranchCache
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-BranchCache
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-Data-Deduplication
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-Data-Deduplication
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-DFS-Namespace
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-DFS-Namespace
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-DFS-Replication
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-DFS-Replication
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-Resource-Manager
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-Resource-Manager
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-VSS-Agent
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-VSS-Agent
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-iSCSITarget-Server
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-iSCSITarget-Server
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: iSCSITarget-VSS-VDS
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: iSCSITarget-VSS-VDS
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-NFS-Service
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-NFS-Service
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-SyncShareService
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-SyncShareService
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]  in 2.3430 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: Telnet-Client
+VERBOSE: [V26267NCEC202]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: Telnet-Client
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]  in 0.2030 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource:
+Checking the IP Address.
+VERBOSE: [V26267NCEC202]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource: IP
+Address is in desired state.
+VERBOSE: [V26267NCEC202]:                            [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration] Test-TargetResource:
+Prefix Length is in desired state.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]  in 1.4540 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[IPAddress]NetworkIp::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Checking the Default Gateway Address.
+VERBOSE: [V26267NCEC202]:                            [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Default gateway is correct.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]  in
+0.0460 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[DefaultGatewayAddress]DefaultGateway::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Checking the DNS server addresses.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Getting staticly assigned DNS server IPv4 address for interface alias 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-DnsClientServerStaticAddress: Statically assigned DNS server IPv4 address for interface alias 'Production' is '134.67.208.5,161.80.76.28'.
+VERBOSE: [V26267NCEC202]:                            [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: DNS server addresses are set correctly.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.0940
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[DnsServerAddress]DnsServers::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Testing NetBIOS
+configuration for Interface 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Getting NetBIOS
+configuration for Interface 'Production'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_NetworkAdapter WHERE
+NetConnectionID="Production",'queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Query
+CimInstances' complete.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Interface 'Production'
+ detected with Index number 10.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Perform operation
+'Enumerate Associated CimInstances' with following parameters, ''sourceRole' = ,'sourceInstance' = Win32_NetworkAdapter: [00000001] vmxnet3 Ethernet
+Adapter (DeviceID = "1"),'associationClassName' = ,'namespaceName' = root/cimv2,'resultClassName' = Win32_NetworkAdapterConfiguration,'resultRole' =
+'.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Operation 'Enumerate
+Associated CimInstances' complete.
+VERBOSE: [V26267NCEC202]:                            [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration] Current NetBIOS
+configuration for Interface 'vmxnet3 Ethernet Adapter' is 'Disable'.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.1560 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[NetBios]DisableNetBios::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]:                            [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+Test-TargetResource: Testing WINS settings.
+VERBOSE: [V26267NCEC202]:                            [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+Get-TargetResource: Getting WINS settings.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]  in 0.0320
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[WinsSetting]DisableLmhostsLookup::[NetworkIpConfiguration]NetworkIpConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]  in 0.0310 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Skip   Set      ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]:                            [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages] Differences =
+
+False
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Test     ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]  in 0.0470
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]  in 0.4370
+seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Test     ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Converting
+CIMInstance[] to hashtable
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] >> Converting CIM
+Pairs
+VERBOSE: [V26267NCEC202]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Testing whether the
+ Package sccm is Installed
+Cannot bind argument to parameter 'Path' because it is null.
+    + CategoryInfo          : InvalidData: (:) [], CimException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.JoinPathCommand
+    + PSComputerName        : v26267ncec202
+
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : CBE76C28-6003-11EB-9EA8-0050569E8E39
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {NONE}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : PendingConfiguration
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec202
+PSComputerName                 : v26267ncec202
+
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Push-DscTo.ps1 -computer v26267ncec202^C
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC>

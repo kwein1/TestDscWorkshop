@@ -9,27 +9,24 @@ Configurations:
 ChocolateyPackages:
   Software:
     Ensure: Present
-  Features:
-    Name: useFipsCompliantChecksums
-    Ensure: Present
   Sources:
     Name: ORDChoco
     Ensure: Present
     Source: '\\V26265NCHH500\ORDChoco'
+#    Source: '\\V26265NCHH500\chiz$\software installs and downloads\ChocolateyPackages'
+  Features:
+    Name: useFipsCompliantChecksums
+    Ensure: Present
   Packages:
-    - Name: sccm
-      Ensure: Present
-      ChocolateyOptions:
-        Source: ORDChoco
     - Name: encase
       Ensure: Present
       ChocolateyOptions:
         Source: ORDChoco
-    - Name: bigfix
+    - Name: sccm
       Ensure: Present
       ChocolateyOptions:
         Source: ORDChoco
-    - Name: laps
+    - Name: bigfix
       Ensure: Present
       ChocolateyOptions:
         Source: ORDChoco

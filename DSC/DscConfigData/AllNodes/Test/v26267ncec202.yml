@@ -5,14 +5,24 @@ Description: '[Command=(Import-Csv -Path $env:BHProjectPath\DscConfigData\Extern
 Location: Frankfurt
 
 # This is required
+# InterfaceAlias pulled from Get-NetIPAddress:
+#IpConfiguration:
+#  Adapter:
+#    - NewName: Production
+      #MacAddress:
+#  IpAddress: 134.67.216.199
+#  Gateway: 134.67.216.1
+#  DnsServer: ['134.67.208.5', '161.80.76.28']
+#  InterfaceAlias: Production
+
 NetworkIpConfiguration:
   IpAddress: 134.67.216.199
   Gateway: 134.67.216.1
-  # Pulled from Get-NetIPAddress:
+  DnsServer: ['134.67.208.5', '161.80.76.28']
   InterfaceAlias: Production
 
-PSDscAllowPlainTextPassword: True
-PSDscAllowDomainUser: True
+#PSDscAllowPlainTextPassword: True
+#PSDscAllowDomainUser: True
 
 LcmConfig:
   ConfigurationRepositoryWeb:

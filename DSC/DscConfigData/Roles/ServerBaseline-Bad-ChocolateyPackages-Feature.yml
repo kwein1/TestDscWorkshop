@@ -1,0 +1,21 @@
+#Configurations:
+#  - Chocolatey
+#  - ChocoFeature
+
+#Chocolatey:
+#  Ensure: Present
+#  #ChocolateyFeature:
+#  #  Name: useFipsCompliantChecksums
+#  #  Ensure: Present
+
+#ChocoFeature:
+#  Name: useFipsCompliantChecksums
+#  Ensure: Present
+
+Configurations:
+  - ChocolateyPackages
+
+ChocolateyPackages: # first key is always the DSC Composite
+  Feature:                     # second keys are the Composite Parameter
+    Name: useFipsCompliantChecksums
+    Ensure: Present

@@ -1,4 +1,4 @@
-NodeName: v26267ncdsc01
+NodeName: v26267ncdsc01 # BJ uses this one, Michael uses dsc02
 Environment: Test
 Role: ORDBasicServer
 Description: '[Command=(Import-Csv -Path $env:BHProjectPath\DscConfigData\ExternalData.csv -Delimiter ";" | Where-Object ComputerName -eq v26267ncdsc01).Description]'
