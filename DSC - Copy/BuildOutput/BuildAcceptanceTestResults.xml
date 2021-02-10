@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="4" errors="0" failures="2" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2021-02-08" time="17:53:56">
+  <environment clr-version="4.0.30319.42000" user-domain="AA" cwd="E:\CHIZ\DSC\Try2\DscWorkshop\DSC" platform="Microsoft Windows Server 2012 R2 Standard|C:\Windows|\Device\Harddisk0\Partition2" machine-name="V26265NCHH500" nunit-version="2.5.8.0" os-version="6.3.9600" user="kevin.weinrich" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="0.295" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\Acceptance\TestMofFiles.Tests.ps1" executed="True" result="Failure" success="False" time="0.2369" asserts="0" description="E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\Acceptance\TestMofFiles.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MOF Files" executed="True" result="Failure" success="False" time="0.1513" asserts="0" description="MOF Files">
+            <results>
+              <test-case description="All nodes have a MOF file" name="MOF Files.All nodes have a MOF file" time="0.0096" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Expected 1, but got 0.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\Acceptance\TestMofFiles.Tests.ps1: line 41
+41:         $mofFiles.Count | Should -Be $nodes.Count</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Node 'v26267ncec202' should have a MOF file" name="MOF Files.Node 'v26267ncec202' should have a MOF file" time="0.005" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Expected the value to have type [System.IO.FileSystemInfo] or any of its subtypes, but got $null with type $null.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\Acceptance\TestMofFiles.Tests.ps1: line 46
+46:             $mofFiles | Where-Object BaseName -eq $node.NodeName | Should -BeOfType System.IO.FileSystemInfo </stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="All nodes have a Meta MOF file" name="MOF Files.All nodes have a Meta MOF file" time="0.0021" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Node 'v26267ncec202' should have a Meta MOF file" name="MOF Files.Node 'v26267ncec202' should have a Meta MOF file" time="0.0017" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\ConfigData\ConfigData.Tests.ps1" executed="True" result="Success" success="True" time="0.058" asserts="0" description="E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\ConfigData\ConfigData.Tests.ps1">
+        <results />
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

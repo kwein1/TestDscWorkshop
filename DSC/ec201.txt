@@ -1,0 +1,2505 @@
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\build.ps1 -resolvedependency
+Current Process ID is '42300'
+Downloading dependencies, this may take a while
+True
+Current Process ID is '42300'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               1/29/2021 3:59:34 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0200040
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.1680061
+
+===============================================================================
+                        DOWNLOADDSCCONFIGURATIONS
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDscConfigurations.ps1:1
+
+Pull dependencies from PSDepend.DscConfigurations.psd1
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations 00:00:00.2710194
+
+===============================================================================
+                        DOWNLOADDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDependencies.ps1:3
+
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscResources 00:00:03.7192614
+Done /./SetPsModulePath/DownloadDependencies 00:00:03.9972816
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:04.9593513
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 2
+Done /./LoadDatumConfigData 00:00:00.4640308
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Tests completed in 2.57s
+Tests Passed: 42, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:03.2832323
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0139995
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 2 nodes.
+Done /./CompileDatumRsop 00:00:01.7421271
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:25.7988229
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+PSDesiredStateConfiguration\node : At line:7 char:1
++ InterfaceAlias = $($Parameters['InterfaceAlias'])
++ ~~~~~~~~~~~~~~
+The member 'InterfaceAlias' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At line:8 char:1
++ IpAddress = $($Parameters['IpAddress'])
++ ~~~~~~~~~
+The member 'IpAddress' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At line:9 char:1
++ Gateway = $($Parameters['Gateway'])
++ ~~~~~~~
+The member 'Gateway' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\RootConfiguration.ps1:28 char:5
++     node $ConfigurationData.AllNodes.NodeName {
++     ~~~~
+    + CategoryInfo          : ParserError: (:) [PSDesiredStateConfiguration\node], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidInstanceProperty,PSDesiredStateConfiguration\node
+
+Error occured during compilation of node 'v26267ncec201' : Compilation errors occurred while processing configuration 'RootConfiguration'. Please revi
+ew the errors reported in error stream and modify your configuration code appropriately.
+Compilation errors occurred while processing configuration 'RootConfiguration'. Please review the errors reported in error stream and modify your
+configuration code appropriately.
+At C:\Windows\System32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguration\PSDesiredStateConfiguration.psm1:3917 char:5
++     throw $ErrorRecord
++     ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (RootConfiguration:String) [], InvalidOperationException
+    + FullyQualifiedErrorId : FailToProcessConfiguration
+
+PSDesiredStateConfiguration\node : At line:7 char:1
++ InterfaceAlias = $($Parameters['InterfaceAlias'])
++ ~~~~~~~~~~~~~~
+The member 'InterfaceAlias' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:8 char:1
++ IpAddress = $($Parameters['IpAddress'])
++ ~~~~~~~~~
+The member 'IpAddress' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:9 char:1
++ Gateway = $($Parameters['Gateway'])
++ ~~~~~~~
+The member 'Gateway' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\RootConfiguration.ps1:28 char:5
++     node $ConfigurationData.AllNodes.NodeName {
++     ~~~~
+    + CategoryInfo          : ParserError: (:) [PSDesiredStateConfiguration\node], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidInstanceProperty,PSDesiredStateConfiguration\node
+
+Exception calling "InvokeWithContext" with "2" argument(s): "Exception calling "Create" with "1" argument(s): "At line:7 char:1
++ InterfaceAlias = $($Parameters['InterfaceAlias'])
++ ~~~~~~~~~~~~~~
+The member 'InterfaceAlias' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:8 char:1
++ IpAddress = $($Parameters['IpAddress'])
++ ~~~~~~~~~
+The member 'IpAddress' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:9 char:1
++ Gateway = $($Parameters['Gateway'])
++ ~~~~~~~
+The member 'Gateway' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.""
+At C:\Windows\System32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguration\PSDesiredStateConfiguration.psm1:1026 char:21
++ ...             $Value.InvokeWithContext($functionsToDefine, $variablesTo ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : CmdletInvocationException
+
+
+
+---------------------------------------------------------------------------
+v26267ncec202 : v26267ncec202 : MOF__0.0.0 Test
+    v26267ncec202 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec202 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec202 : FileServer ::> WindowsFeatures .................................................OK
+PSDesiredStateConfiguration\node : At line:7 char:1
++ Prefix = $($Parameters['Prefix'])
++ ~~~~~~
+The member 'Prefix' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At line:8 char:1
++ InterfaceAlias = $($Parameters['InterfaceAlias'])
++ ~~~~~~~~~~~~~~
+The member 'InterfaceAlias' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At line:9 char:1
++ DisableNetbios = $($Parameters['DisableNetbios'])
++ ~~~~~~~~~~~~~~
+The member 'DisableNetbios' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At line:10 char:1
++ Gateway = $($Parameters['Gateway'])
++ ~~~~~~~
+The member 'Gateway' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At line:11 char:1
++ DnsServer = $($Parameters['DnsServer'])
++ ~~~~~~~~~
+The member 'DnsServer' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\RootConfiguration.ps1:28 char:5
++     node $ConfigurationData.AllNodes.NodeName {
++     ~~~~
+    + CategoryInfo          : ParserError: (:) [PSDesiredStateConfiguration\node], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidInstanceProperty,PSDesiredStateConfiguration\node
+
+Error occured during compilation of node 'v26267ncec202' : Compilation errors occurred while processing configuration 'RootConfiguration'. Please revi
+ew the errors reported in error stream and modify your configuration code appropriately.
+Compilation errors occurred while processing configuration 'RootConfiguration'. Please review the errors reported in error stream and modify your
+configuration code appropriately.
+At C:\Windows\System32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguration\PSDesiredStateConfiguration.psm1:3917 char:5
++     throw $ErrorRecord
++     ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (RootConfiguration:String) [], InvalidOperationException
+    + FullyQualifiedErrorId : FailToProcessConfiguration
+
+PSDesiredStateConfiguration\node : At line:7 char:1
++ Prefix = $($Parameters['Prefix'])
++ ~~~~~~
+The member 'Prefix' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:8 char:1
++ InterfaceAlias = $($Parameters['InterfaceAlias'])
++ ~~~~~~~~~~~~~~
+The member 'InterfaceAlias' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:9 char:1
++ DisableNetbios = $($Parameters['DisableNetbios'])
++ ~~~~~~~~~~~~~~
+The member 'DisableNetbios' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:10 char:1
++ Gateway = $($Parameters['Gateway'])
++ ~~~~~~~
+The member 'Gateway' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:11 char:1
++ DnsServer = $($Parameters['DnsServer'])
++ ~~~~~~~~~
+The member 'DnsServer' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\RootConfiguration.ps1:28 char:5
++     node $ConfigurationData.AllNodes.NodeName {
++     ~~~~
+    + CategoryInfo          : ParserError: (:) [PSDesiredStateConfiguration\node], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidInstanceProperty,PSDesiredStateConfiguration\node
+
+Exception calling "InvokeWithContext" with "2" argument(s): "Exception calling "Create" with "1" argument(s): "At line:7 char:1
++ Prefix = $($Parameters['Prefix'])
++ ~~~~~~
+The member 'Prefix' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:8 char:1
++ InterfaceAlias = $($Parameters['InterfaceAlias'])
++ ~~~~~~~~~~~~~~
+The member 'InterfaceAlias' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:9 char:1
++ DisableNetbios = $($Parameters['DisableNetbios'])
++ ~~~~~~~~~~~~~~
+The member 'DisableNetbios' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:10 char:1
++ Gateway = $($Parameters['Gateway'])
++ ~~~~~~~
+The member 'Gateway' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.
+
+At line:11 char:1
++ DnsServer = $($Parameters['DnsServer'])
++ ~~~~~~~~~
+The member 'DnsServer' is not valid. Valid members are
+'Adapter', 'DependsOn', 'PsDscRunAsCredential'.""
+At C:\Windows\System32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguration\PSDesiredStateConfiguration.psm1:1026 char:21
++ ...             $Value.InvokeWithContext($functionsToDefine, $variablesTo ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : CmdletInvocationException
+
+
+WARNING: Compiled MOF file count <> node count
+Successfully compiled 0 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:18.6663209
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+WARNING: A ConfigurationRepository is specified without setting the refresh mode into PULL.
+WARNING: A ConfigurationRepository is specified without setting the refresh mode into PULL.
+Successfully compiled 2 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:01.4010991
+Done /. 00:00:56.6059989
+WARNING: /CompileRootConfiguration E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:12
+Compiled MOF file count <> node count
+Build succeeded with warnings. 14 tasks, 0 errors, 1 warnings 00:00:56.8280129
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0060038
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:29.3530711
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0100008
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+    [-] All nodes have a MOF file 15ms
+      Expected 2, but got 0.
+      41:         $mofFiles.Count | Should -Be $nodes.Count
+      at <ScriptBlock>, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\Acceptance\TestMofFiles.Tests.ps1: line 41
+    [-] Node 'v26267ncec201' should have a MOF file 6ms
+      Expected the value to have type [System.IO.FileSystemInfo] or any of its subtypes, but got $null with type $null.
+      46:             $mofFiles | Where-Object BaseName -eq $node.NodeName | Should -BeOfType System.IO.FileSystemInfo
+      at <ScriptBlock>, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\Acceptance\TestMofFiles.Tests.ps1: line 46
+    [-] Node 'v26267ncec202' should have a MOF file 6ms
+      Expected the value to have type [System.IO.FileSystemInfo] or any of its subtypes, but got $null with type $null.
+      46:             $mofFiles | Where-Object BaseName -eq $node.NodeName | Should -BeOfType System.IO.FileSystemInfo
+      at <ScriptBlock>, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests\Acceptance\TestMofFiles.Tests.ps1: line 46
+Node count: 2
+Tests completed in 399ms
+Tests Passed: 3, Failed: 3, Skipped: 0, Pending: 0, Inconclusive: 0
+ERROR: Assertion failed.
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestBuildAcceptance.ps1:39 char:9
++         assert (-not $testResults.FailedCount)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestBuildAcceptance.ps1:1 char:1
++ task TestBuildAcceptance {
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1:59 char:1
++ task . NewMofChecksums,
++ ~~~~~~~~~~~~~~~~~~~~~~~
+Build FAILED. 5 tasks, 1 errors, 0 warnings 00:00:30.1901313
+assert : Assertion failed.
+At E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestBuildAcceptance.ps1:39 char:9
++         assert (-not $testResults.FailedCount)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Assert-Build], Exception
+    + FullyQualifiedErrorId : Assert-Build
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\build.ps1 -resolvedependency
+Current Process ID is '42300'
+Downloading dependencies, this may take a while
+True
+Current Process ID is '42300'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               1/29/2021 4:37:50 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0330030
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.1060073
+
+===============================================================================
+                        DOWNLOADDSCCONFIGURATIONS
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDscConfigurations.ps1:1
+
+Pull dependencies from PSDepend.DscConfigurations.psd1
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations 00:00:00.2560167
+
+===============================================================================
+                        DOWNLOADDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDependencies.ps1:3
+
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscResources 00:00:03.9152714
+Done /./SetPsModulePath/DownloadDependencies 00:00:04.1772951
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:04.5583159
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 2
+Done /./LoadDatumConfigData 00:00:00.4970352
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Tests completed in 2.62s
+Tests Passed: 42, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:03.2892301
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0150031
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 2 nodes.
+Done /./CompileDatumRsop 00:00:01.6911154
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:24.4027222
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec201 : FileServer ::> IpConfiguration .................................................OK
+    v26267ncec201 : FileServer ::> ChocolateyPackages ..............................................OK
+    v26267ncec201 : FileServer ::> RegistryValues ..................................................OK
+    v26267ncec201 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec201 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec201 : FileServer ::> DscTagging ......................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec202 : v26267ncec202 : MOF__0.0.0 Test
+    v26267ncec202 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec202 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec202 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec202 : FileServer ::> IpConfiguration .................................................OK
+    v26267ncec202 : FileServer ::> ChocolateyPackages ..............................................OK
+    v26267ncec202 : FileServer ::> RegistryValues ..................................................OK
+    v26267ncec202 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec202 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec202 : FileServer ::> DscTagging ......................................................OK
+Successfully compiled 2 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:21.7195321
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+WARNING: A ConfigurationRepository is specified without setting the refresh mode into PULL.
+WARNING: A ConfigurationRepository is specified without setting the refresh mode into PULL.
+Successfully compiled 2 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:01.3140925
+Done /. 00:00:57.7120785
+Build succeeded. 14 tasks, 0 errors, 0 warnings 00:00:57.9570879
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0269999
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:29.1680567
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0100019
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Node count: 2
+Tests completed in 272ms
+Tests Passed: 6, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.4900362
+Done /. 00:00:29.7140971
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:29.8471091
+Created 2 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              -resolvedependency
+?                              True
+^                              .\build.ps1
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   2
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {Name, Description, LcmConfig, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            42300
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {[DownloadResourcesAndConfigurations, True]}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              True
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              SilentlyContinue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               1/29/2021 4:37:50 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+ChocolateyInstall              C:\ProgramData\chocolatey
+ChocolateyLastPathUpdate       132526985146079089
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT603
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           AMD64 Family 23 Model 49 Stepping 0, AuthenticAMD
+PROCESSOR_LEVEL                23
+PROCESSOR_REVISION             3100
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#35
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\73
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\73
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\build.ps1 -resolvedependency
+Current Process ID is '42300'
+Downloading dependencies, this may take a while
+True
+Current Process ID is '42300'
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               1/29/2021 5:08:18 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0500000
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.1459970
+
+===============================================================================
+                        DOWNLOADDSCCONFIGURATIONS
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDscConfigurations.ps1:1
+
+Pull dependencies from PSDepend.DscConfigurations.psd1
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations 00:00:00.2639958
+
+===============================================================================
+                        DOWNLOADDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDependencies.ps1:3
+
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscResources 00:00:03.5119799
+Done /./SetPsModulePath/DownloadDependencies 00:00:03.7829747
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:04.6559702
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 2
+Done /./LoadDatumConfigData 00:00:00.5349960
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Tests completed in 2.61s
+Tests Passed: 42, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:03.2999808
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0389999
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 2 nodes.
+Done /./CompileDatumRsop 00:00:01.7169907
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.1.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:24.5727258
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+
+---------------------------------------------------------------------------
+v26267ncec201 : v26267ncec201 : MOF__0.0.0 Test
+    v26267ncec201 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec201 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec201 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec201 : FileServer ::> IpConfiguration .................................................OK
+    v26267ncec201 : FileServer ::> ChocolateyPackages ..............................................OK
+    v26267ncec201 : FileServer ::> RegistryValues ..................................................OK
+    v26267ncec201 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec201 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec201 : FileServer ::> DscTagging ......................................................OK
+
+---------------------------------------------------------------------------
+v26267ncec202 : v26267ncec202 : MOF__0.0.0 Test
+    v26267ncec202 : FileServer ::> FilesAndFolders .................................................OK
+    v26267ncec202 : FileServer ::> SecurityBase ....................................................OK
+    v26267ncec202 : FileServer ::> WindowsFeatures .................................................OK
+    v26267ncec202 : FileServer ::> IpConfiguration .................................................OK
+    v26267ncec202 : FileServer ::> ChocolateyPackages ..............................................OK
+    v26267ncec202 : FileServer ::> RegistryValues ..................................................OK
+    v26267ncec202 : FileServer ::> DscLcmController ................................................OK
+    v26267ncec202 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+    v26267ncec202 : FileServer ::> DscTagging ......................................................OK
+Successfully compiled 2 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:21.9989861
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+WARNING: A ConfigurationRepository is specified without setting the refresh mode into PULL.
+WARNING: A ConfigurationRepository is specified without setting the refresh mode into PULL.
+Successfully compiled 2 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:01.3190591
+Done /. 00:00:58.4307062
+Build succeeded. 14 tasks, 0 errors, 0 warnings 00:00:58.6657078
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0260004
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:28.9222936
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0090004
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 2
+Node count: 2
+Tests completed in 276ms
+Tests Passed: 6, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.4940239
+Done /. 00:00:29.4713176
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:29.6053264
+Created 2 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              -resolvedependency
+?                              True
+^                              .\build.ps1
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   2
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {Name, Description, LcmConfig, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            42300
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {[DownloadResourcesAndConfigurations, True]}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              True
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              SilentlyContinue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               1/29/2021 5:08:18 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+ChocolateyInstall              C:\ProgramData\chocolatey
+ChocolateyLastPathUpdate       132526985146079089
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT603
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           AMD64 Family 23 Model 49 Stepping 0, AuthenticAMD
+PROCESSOR_LEVEL                23
+PROCESSOR_REVISION             3100
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#35
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\73
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\73
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Push-DscTo.ps1 -computer v26267ncec201
+
+
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : A4B6FF8A-3B19-11EB-9EA7-0050569E92F0
+AllowModuleOverWrite           : False
+CertificateID                  :
+ConfigurationDownloadManagers  : {}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 44640
+Credential                     :
+DebugMode                      : {NONE}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : Idle
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 44640
+RefreshMode                    : Push
+ReportManagers                 : {}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec201
+PSComputerName                 : v26267ncec201
+
+VERBOSE: Performing the operation "Start-DscConfiguration: SendMetaConfigurationApply" on target "MSFT_DSCLocalConfigurationManager".
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendMetaConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC201 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [MSFT_DSCMetaConfiguration]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]
+Registration of the Dsc Agent with the server https://dscpull01.contoso.com:8080/PSDSCPullServer.svc failed. The underlying error is: Failed to
+register Dsc Agent with AgentId A4B6FF8A-3B19-11EB-9EA7-0050569E92F0 with the server
+https://dscpull01.contoso.com:8080/PSDSCPullServer.svc/Nodes(AgentId='A4B6FF8A-3B19-11EB-9EA7-0050569E92F0'). .
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : RegisterDscAgentCommandFailed,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
+    + PSComputerName        : v26267ncec201
+
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Set-DscLocalConfigurationManager finished in 1.24 seconds.
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : A4B6FF8A-3B19-11EB-9EA7-0050569E92F0
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {NONE}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : Idle
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec201
+PSComputerName                 : v26267ncec201
+
+VERBOSE: Performing the operation "Applying MOF e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec201.mof" on target "v26267ncec201".
+VERBOSE: Module match: cChoco
+VERBOSE: Module match: chocolatey
+VERBOSE: Module match: ComputerManagementDsc
+VERBOSE: Module match: datum
+VERBOSE: Module match: DscBuildHelpers
+VERBOSE: Module match: JeaDsc
+VERBOSE: Module match: NetworkingDsc
+VERBOSE: Module match: powershell-yaml
+VERBOSE: Module match: SecurityPolicyDsc
+VERBOSE: Module match: StorageDsc
+VERBOSE: Module match: xDscDiagnostics
+VERBOSE: Module match: xDSCResourceDesigner
+VERBOSE: Module match: xPSDesiredStateConfiguration
+VERBOSE: The Missing modules are
+VERBOSE: looking for missing zip modules in e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+
+PSPath            : Microsoft.PowerShell.Core\FileSystem::E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+PSParentPath      : Microsoft.PowerShell.Core\FileSystem::E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput
+PSChildName       : ModulesNew
+PSDrive           : E
+PSProvider        : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer     : True
+Name              : ModulesNew
+FullName          : E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+Parent            : BuildOutput
+Exists            : True
+Root              : E:\
+Extension         :
+CreationTime      : 1/29/2021 5:19:44 PM
+CreationTimeUtc   : 1/29/2021 10:19:44 PM
+LastAccessTime    : 1/29/2021 5:19:44 PM
+LastAccessTimeUtc : 1/29/2021 10:19:44 PM
+LastWriteTime     : 1/29/2021 5:19:44 PM
+LastWriteTimeUtc  : 1/29/2021 10:19:44 PM
+Attributes        : Directory
+Mode              : d-----
+BaseName          : ModulesNew
+Target            : {E:\RF-RTP-DS1A\DSC\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew}
+LinkType          :
+
+VERBOSE: Expanding C:\temp/*.zip to C:\Program Files\Common Files\WindowsPowerShell\Modules\cChoco chocolatey ComputerManagementDsc datum
+DscBuildHelpers JeaDsc NetworkingDsc powershell-yaml SecurityPolicyDsc StorageDsc xDscDiagnostics xDSCResourceDesigner
+xPSDesiredStateConfiguration\2.4.1.0 0.0.79 8.4.0 0.39.0 0.0.42 0.7.2 8.1.0 0.4.2 2.10.0.0 5.0.1 2.8.0 1.9.0.0 9.1.0
+VERBOSE: Removing previously pushed configuration documents
+VERBOSE: Attempting to apply C:\temp\localhost.mof on v26267ncec201
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC201 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders] The destination object was
+found and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test-Environment::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\RTP::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\RTP::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\RTP::[FilesAndFolders]FilesAndFolders] The destination object was found and no
+action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\RTP::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\RTP::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\RTP::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test::[FilesAndFolders]FilesAndFolders] The destination object was found and no action
+is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]  in 0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File1.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders] The destination object was found
+ and no action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\Test\Test1File2.txt::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The network path was not found.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The path cannot point to the root
+directory or to the root of a net share.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The related file/directory is:
+\\DSCDC01\SYSVOL\contoso.com\Policies.
+VERBOSE: [V26267NCEC201]:                            [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders] The destination object was found and no
+action is required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]  in 1.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]C\GpoBackup::[FilesAndFolders]FilesAndFolders]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Begin executing Test functionality
+on the FS-SMB1 feature.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Perform operation 'Enumerate
+CimInstances' with following parameters, ''namespaceName' = root\cimv2,'className' = Win32_OperatingSystem'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Operation 'Enumerate CimInstances'
+complete.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psd1'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading 'FormatsToProcess' from path
+ 'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\Feature.format.ps1xml'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Loading module from path
+'C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ServerManager\ServerManager.psm1'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Get-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Install-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing cmdlet
+'Uninstall-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Disable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing function
+'Enable-ServerManagerStandardUserRemoting'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Add-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Importing alias
+'Remove-WindowsFeature'.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] Querying for feature FS-SMB1 using
+Server Manager cmdlet Get-WindowsFeature.
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+started: FS-SMB1
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] The operation 'Get-WindowsFeature'
+succeeded: FS-SMB1
+VERBOSE: [V26267NCEC201]:                            [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase] End executing Test functionality on
+the FS-SMB1 feature.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]  in 0.6250 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xWindowsFeature]DisableSmbV1::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase] Testing the
+current execution policy for 'LocalMachine' is 'RemoteSigned'.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[PowerShellExecutionPolicy]ExecutionPolicyAllSigned::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase] Testing
+contoso\Administrator is present on policy Deny_log_on_locally
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]  in 0.3910
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[UserRightsAssignment]DenyLogonLocallyForAdministrator::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Testing
+Administrators,Backup Operators is present on policy Allow_log_on_locally
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] BUILTIN\Backup Operators
+does not have Privilege Allow_log_on_locally
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]  in 0.1400 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Policy:
+Allow_log_on_locally. Identity: BUILTIN\Administrators
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Granting
+Allow_log_on_locally rights to BUILTIN\Administrators,BUILTIN\Backup Operators
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Attempting to Set
+BUILTIN\Administrators,BUILTIN\Backup Operators for policy Allow_log_on_locally
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Testing
+Administrators,Backup Operators is present on policy Allow_log_on_locally
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase] Task successfully
+completed
+VERBOSE: [V26267NCEC201]:                            [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+BUILTIN\Administrators,BUILTIN\Backup Operators successfully given rights to Allow_log_on_locally policy
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]  in 1.3750 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[UserRightsAssignment]AllowLogonLocally::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Accounts_Rename_administrator_account
+VERBOSE: [V26267NCEC201]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: a Desired
+policy: a
+VERBOSE: [V26267NCEC201]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_text_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC201]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: Your are
+logging on to a secure file server Desired policy: Your are logging on to a secure file server
+VERBOSE: [V26267NCEC201]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Testing SecurityOption:
+Interactive_logon_Message_title_for_users_attempting_to_log_on
+VERBOSE: [V26267NCEC201]:                            [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase] Current policy: Secure File
+Server Desired policy: Secure File Server
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]  in 0.7500 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[SecurityOption]SecOptionsFileServer::[SecurityBase]SecurityBase]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: File-Services
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: File-Services
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-FileServer
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-FileServer
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-BranchCache
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-BranchCache
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-Data-Deduplication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-Data-Deduplication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-DFS-Namespace
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-DFS-Namespace
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-DFS-Replication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-DFS-Replication
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-Resource-Manager
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-Resource-Manager
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-VSS-Agent
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-VSS-Agent
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-iSCSITarget-Server
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-iSCSITarget-Server
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: iSCSITarget-VSS-VDS
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: iSCSITarget-VSS-VDS
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-NFS-Service
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-NFS-Service
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: FS-SyncShareService
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: FS-SyncShareService
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]  in 2.8600 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[WindowsFeature]File-Services::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' started: Telnet-Client
+VERBOSE: [V26267NCEC201]:                            [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures] The operation
+'Get-WindowsFeature' succeeded: Telnet-Client
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]  in 0.2500 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[WindowsFeature]Telnet-Client::[WindowsFeatures]WindowsFeatures]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration] Test-TargetResource: Testing the network
+ adapter Name 'Production'.
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration] Find-NetworkAdapter: Finding network
+adapters matching the parameters.
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration] Find-NetworkAdapter: 1 network adapters
+were found matching the parameters.
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration] Test-TargetResource: A network adapter
+was found with the intended new name 'Production' of the Adapter. No rename required.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration]  in 0.6400 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]
+[[NetAdapterName]NetAdapterProduction4534cc8d-9701-417e-8315-b71042508679::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration] Test-TargetResource: Checking if
+adapter 'Production' is in desired state.
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration] Get-TargetResource: Checking if
+network adapter exists or not.
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration] Get-TargetResource: Checking if
+adapter 'Production' is in desired state.
+VERBOSE: [V26267NCEC201]:
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration] Test-TargetResource: Network
+adapter 'Production' returned state 'Enabled'.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration]  in 0.0780 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]
+[[NetAdapterState]NetAdapterStateProduction7c6ab1fa-7b60-42fe-a31c-c6ee9d7487ba::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]:
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration] Test-TargetResource: Checking the IP Address.
+VERBOSE: [V26267NCEC201]:
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration] Test-TargetResource: IP Address is in desired
+state.
+VERBOSE: [V26267NCEC201]:
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration] Test-TargetResource: Prefix Length is in
+desired state.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration]  in 1.4070 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]
+[[IPAddress]IpAddressProduction7802b8eb-460a-46e9-bff8-f625220354db::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]
+[[DefaultGatewayAddress]GatewayProductiondbd4a3af-13fd-4368-8f82-0dc8e7030301::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]
+[[DefaultGatewayAddress]GatewayProductiondbd4a3af-13fd-4368-8f82-0dc8e7030301::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]:
+[[DefaultGatewayAddress]GatewayProductiondbd4a3af-13fd-4368-8f82-0dc8e7030301::[IpConfiguration]IpConfiguration] Test-TargetResource: Checking the
+Default Gateway Address.
+VERBOSE: [V26267NCEC201]:
+[[DefaultGatewayAddress]GatewayProductiondbd4a3af-13fd-4368-8f82-0dc8e7030301::[IpConfiguration]IpConfiguration] Test-TargetResource: Default gateway
+ is correct.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]
+[[DefaultGatewayAddress]GatewayProductiondbd4a3af-13fd-4368-8f82-0dc8e7030301::[IpConfiguration]IpConfiguration]  in 0.0620 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]
+[[DefaultGatewayAddress]GatewayProductiondbd4a3af-13fd-4368-8f82-0dc8e7030301::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]
+[[DefaultGatewayAddress]GatewayProductiondbd4a3af-13fd-4368-8f82-0dc8e7030301::[IpConfiguration]IpConfiguration]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ChocolateySoftware]Choco_Software::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]
+[[ChocolateyFeature]ChocolateyFeature_useFipsCompliantChecksums::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]
+[[ChocolateyFeature]ChocolateyFeature_useFipsCompliantChecksums::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]
+[[ChocolateyFeature]ChocolateyFeature_useFipsCompliantChecksums::[ChocolateyPackages]ChocolateyPackages]  in 0.0620 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]
+[[ChocolateyFeature]ChocolateyFeature_useFipsCompliantChecksums::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]
+[[ChocolateyFeature]ChocolateyFeature_useFipsCompliantChecksums::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]:                            [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages] The sources
+match exactly with the provided parameters.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]  in 0.0780
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ChocolateySource]Choco_Source_ORDChoco::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Converting
+CIMInstance[] to hashtable
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] >> Converting CIM
+Pairs
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages] Testing whether the
+ Package sccm is Installed
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]  in 0.9070 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ChocolateyPackage]Chocolatey_sccm::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages] Converting
+CIMInstance[] to hashtable
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages] >> Converting CIM
+ Pairs
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages] Testing whether
+the Package encase is Installed
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages]  in 0.0150
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ChocolateyPackage]Chocolatey_encase::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages] Converting
+CIMInstance[] to hashtable
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages] >> Converting CIM
+ Pairs
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages] Testing whether
+the Package bigfix is Installed
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ChocolateyPackage]Chocolatey_bigfix::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages] Converting
+CIMInstance[] to hashtable
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages] >> Converting CIM
+Pairs
+VERBOSE: [V26267NCEC201]:                            [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages] Testing whether the
+ Package laps is Installed
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ChocolateyPackage]Chocolatey_laps::[ChocolateyPackages]ChocolateyPackages]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Test-TargetResource is
+ starting for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Get-TargetResource is
+starting for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The registry key at
+path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters exists.
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The registry key at
+path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters has a value named NtpServer.
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Get-TargetResource has
+ finished for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] The registry key at
+path HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters has a value named NtpServer.
+VERBOSE: [V26267NCEC201]:
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues] Test-TargetResource
+has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]  in 0.2340 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]
+[[xRegistry]HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\NtpServer::[RegistryValues]RegistryValues]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowMode.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowMode.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]  in
+0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowMode::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MonitorInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MonitorInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]  in 0.0630
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MonitorInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]  in 0.0150
+ seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_AutoCorrectInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named AutoCorrectIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_AutoCorrectIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_RefreshInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named RefreshIntervalOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]  in
+0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_RefreshIntervalOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named ControllerInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named ControllerInterval.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_ControllerInterval::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaintenanceWindowOverride.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]  in
+0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MaintenanceWindowOverride::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named WriteTranscripts.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController] The registry
+key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named WriteTranscripts.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_WriteTranscripts::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController] The registry key
+ at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController] The registry key
+ at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaxLcmRuntime.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController] The registry key
+ at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named MaxLcmRuntime.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]  in 0.0160
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_MaxLcmRuntime::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named SendDscTaggingData.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController has a value named SendDscTaggingData.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]  in 0.0150
+seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscLcmController_SendDscTaggingData::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[File]DscLcmControllerScript::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Testing scheduled task
+'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Getting current scheduled
+ task values for task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Task 'DscLcmController'
+found in '\DscController\'. Retrieving settings, first action, first trigger and repetition settings.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Detected schedule type
+'Once' for first trigger.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Current scheduled task
+values for task 'DscLcmController' in '\DscController\' retrieved.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Testing DSC parameter
+state.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] NOTMATCH: Value (type
+'System.String') for property 'StartTime' does not match. Current state is '2021-01-20T12:06:16' and desired state is '2021-01-29T17:09:03'.
+(DRC0021)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'ActionExecutable' does match. Current state is 'C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe' and desired
+ state is 'C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'ActionArguments' does match. Current state is '-File C:\ProgramData\Dsc\LcmController\LcmController.ps1' and desired
+state is '-File C:\ProgramData\Dsc\LcmController\LcmController.ps1'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'TaskPath' does match. Current state is '\DscController\' and desired state is '\DscController\'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'RepeatInterval' does match. Current state is '00:05:00' and desired state is '00:05:00'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'ScheduleType' does match. Current state is 'Once' and desired state is 'Once'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'LogonType' does match. Current state is 'ServiceAccount' and desired state is 'ServiceAccount'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'TaskName' does match. Current state is 'DscLcmController' and desired state is 'DscLcmController'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] MATCH: Value (type
+'System.String') for property 'RepetitionDuration' does match. Current state is 'Indefinitely' and desired state is 'Indefinitely'. (DRC0020)
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Test-DscParameter result
+is 'False'. (DRC0026)
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]  in 1.0780 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Setting scheduled task
+'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Getting current scheduled
+ task values for task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Task 'DscLcmController'
+found in '\DscController\'. Retrieving settings, first action, first trigger and repetition settings.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Detected schedule type
+'Once' for first trigger.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Current scheduled task
+values for task 'DscLcmController' in '\DscController\' retrieved.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Configuring trigger
+repetition.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating
+MSFT_TaskRepetitionPattern CIM instance to configure repetition in trigger.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating temporary
+trigger to get MSFT_TaskRepetitionPattern CIM instance.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating scheduled task
+principal for account 'NT AUTHORITY\SYSTEM' using logon type 'ServiceAccount'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Retrieving the scheduled
+task 'DscLcmController' from '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Creating new scheduled
+task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Setting repetition
+trigger settings on task 'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]:                            [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController] Updating scheduled task
+'DscLcmController' in '\DscController\'.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]  in 0.7810 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[ScheduledTask]DscControllerTask::[DscLcmController]DscLcmController]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in 0.0630
+ seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] Performing
+ the operation "Set-TargetResource" on target "Executing the SetScript with the user supplied credential".
+VERBOSE: [V26267NCEC201]:                            [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] There is a
+ difference in the maintainance window definition. Removing currently configured maintenance windows.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in 0.0150
+ seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[Script]MaintenanceWindowsCheck::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not exist.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not have a value named
+StartTime.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Test-TargetResource has finished for Registry resource with Key
+HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Set-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not exist.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Creating registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Setting the value StartTime under the registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Set-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+  in 0.0470 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]StartTime_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not have a value named Timespan.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not have a value named Timespan.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Set-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Setting the value Timespan under the registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Set-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ in 0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]Timespan_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not have a value named
+DayOfWeek.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not have a value named
+DayOfWeek.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Test-TargetResource has finished for Registry resource with Key
+HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+  in 0.0000 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Set-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ The registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Setting the value DayOfWeek under the registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+ Set-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DayOfWeek_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not have a value named On.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Get-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight does not have a value named On.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Test-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in
+0.0780 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Set-TargetResource is starting for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows] The
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Setting the value On under the registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+Set-TargetResource has finished for Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscLcmController\MaintenanceWindows\KWFirstWednesdayNight
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]  in
+0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]On_KWFirstWednesdayNight::[DscLcmMaintenanceWindows]DscLcmMaintenanceWindows]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Version.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Version.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscVersion::[DscTagging]DscTagging] Test-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]  in 0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscVersion::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Environment.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named Environment.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscEnvironment::[DscTagging]DscTagging] Test-TargetResource has finished for
+Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscEnvironment::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named GitCommitId.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named GitCommitId.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The value GitCommitId under the registry key
+ at path HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging does not match the expected value. Expected System.String[] but was System.Object[].
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Test-TargetResource has finished for
+Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Set-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Overwriting the value GitCommitId under the
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscGitCommitId::[DscTagging]DscTagging] Set-TargetResource has finished for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscGitCommitId::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildDate.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildDate.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The value BuildDate under the registry key at
+path HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging does not match the expected value. Expected System.String[] but was System.Object[].
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Test-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]  in 0.0150 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Set      ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Set-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Overwriting the value BuildDate under the
+registry key at path HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging...
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildDate::[DscTagging]DscTagging] Set-TargetResource has finished for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]  in 0.0780 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscBuildDate::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Resource ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ Start  Test     ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Test-TargetResource is starting for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Get-TargetResource is starting for Registry
+resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging exists.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildNumber.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Get-TargetResource has finished for Registry
+ resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] The registry key at path
+HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging has a value named BuildNumber.
+VERBOSE: [V26267NCEC201]:                            [[xRegistry]DscBuildNumber::[DscTagging]DscTagging] Test-TargetResource has finished for
+Registry resource with Key HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Test     ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]  in 0.0160 seconds.
+VERBOSE: [V26267NCEC201]: LCM:  [ Skip   Set      ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Resource ]  [[xRegistry]DscBuildNumber::[DscTagging]DscTagging]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]
+VERBOSE: [V26267NCEC201]: LCM:  [ End    Set      ]    in  14.6720 seconds.
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Time taken for configuration job to complete is 15.049 seconds
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : A4B6FF8A-3B19-11EB-9EA7-0050569E92F0
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {NONE}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : Idle
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec201
+PSComputerName                 : v26267ncec201
+
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC>

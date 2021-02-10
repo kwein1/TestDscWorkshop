@@ -1,0 +1,1154 @@
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\build.ps1 -ResolveDependency -verbose
+Current Process ID is '11600'
+VERBOSE: Importing file FlattenArray
+VERBOSE: Importing file Invoke-InternalPSDepend
+VERBOSE: Importing file Resolve-Dependency
+VERBOSE: Importing file Set-PSModulePath
+VERBOSE: Importing file Split-Array
+VERBOSE: Importing file Get-DatumNodesRecursive
+VERBOSE: Importing file Get-DscErrorMessage
+VERBOSE: Importing file Get-FilteredConfigurationData
+VERBOSE: Importing file Copy-DscMof
+VERBOSE: Importing file GetDscMofTagging
+VERBOSE: Importing file CleanBuildOutput
+VERBOSE: Importing file CleanDscConfigurationsFolder
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Cis.Core.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Cis.Core\10.1.0.8377811\VMware.VimAutomation.Cis.Core.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.Vim.
+VERBOSE: Loading module from path 'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.Vim\6.7.0.8343295\VMware.Vim.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Common.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Common\10.1.0.8342134\VMware.VimAutomation.Common.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Sdk.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Sdk\10.1.0.8342078\VMware.VimAutomation.Sdk.psm1'.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Cis.Core\10.1.0.8377811\VMware.VimAutomation.Cis.Core.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.Vim.
+VERBOSE: Loading module from path 'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.Vim\6.7.0.8343295\VMware.Vim.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Common.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Common\10.1.0.8342134\VMware.VimAutomation.Common.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Sdk.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Sdk\10.1.0.8342078\VMware.VimAutomation.Sdk.psm1'.
+VERBOSE: Loading module from path 'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.Vim\6.7.0.8343295\VMware.Vim.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Common.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Common\10.1.0.8342134\VMware.VimAutomation.Common.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Sdk.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Sdk\10.1.0.8342078\VMware.VimAutomation.Sdk.psm1'.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Common\10.1.0.8342134\VMware.VimAutomation.Common.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Sdk.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Sdk\10.1.0.8342078\VMware.VimAutomation.Sdk.psm1'.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Sdk\10.1.0.8342078\VMware.VimAutomation.Sdk.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Sdk.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Sdk\10.1.0.8342078\VMware.VimAutomation.Sdk.psm1'.
+VERBOSE: Exporting function 'Get-InstallPath'.
+VERBOSE: Exporting function 'Get-PSVersion'.
+VERBOSE: Importing function 'Get-InstallPath'.
+VERBOSE: Importing function 'Get-PSVersion'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Common.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Common\10.1.0.8342134\VMware.VimAutomation.Common.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.Vim.
+VERBOSE: Loading module from path 'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.Vim\6.7.0.8343295\VMware.Vim.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module VMware.VimAutomation.Cis.Core.
+VERBOSE: Loading module from path
+'C:\Windows\System32\WindowsPowerShell\v1.0\Modules\VMware.VimAutomation.Cis.Core\10.1.0.8377811\VMware.VimAutomation.Cis.Core.psm1'.
+VERBOSE: Exporting cmdlet 'Connect-CisServer'.
+VERBOSE: Exporting cmdlet 'Disconnect-CisServer'.
+VERBOSE: Exporting cmdlet 'Get-CisService'.
+VERBOSE: Importing cmdlet 'Connect-CisServer'.
+VERBOSE: Importing cmdlet 'Disconnect-CisServer'.
+VERBOSE: Importing cmdlet 'Get-CisService'.
+VERBOSE: Importing file CleanDscResourcesFolder
+VERBOSE: Importing file CompileDatumRsop
+VERBOSE: Importing file CompileRootConfiguration
+VERBOSE: Importing file CompileRootMetaMof
+VERBOSE: Importing file CompressModulesWithChecksum
+VERBOSE: Importing file Deploy
+VERBOSE: Importing file DownloadDependencies
+VERBOSE: Importing file DownloadDscConfigurations
+VERBOSE: Importing file Init
+VERBOSE: Importing file LoadDatumConfigData
+VERBOSE: Importing file NewMofChecksums
+VERBOSE: Importing file SetPsModulePath
+VERBOSE: Importing file TestBuildAcceptance
+VERBOSE: Importing file TestConfigData
+VERBOSE: Importing file TestDscResources
+VERBOSE: Importing file VersionControl
+VERBOSE: Populating RepositorySourceLocation property for module InvokeBuild.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\InvokeBuild\5.6.5\InvokeBuild.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module InvokeBuild.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\InvokeBuild\5.6.4\InvokeBuild.psm1'.
+Downloading dependencies, this may take a while
+VERBOSE: Populating RepositorySourceLocation property for module PSDepend.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PSDepend\0.3.8\PSDepend.psm1'.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PSDepend\0.3.8\PSDepend.psd1'.
+VERBOSE: Loading 'FormatsToProcess' from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PSDepend\0.3.8\PSDepend.Format.ps1xml'.
+VERBOSE: Populating RepositorySourceLocation property for module PSDepend.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PSDepend\0.3.8\PSDepend.psm1'.
+VERBOSE: Importing function 'Get-Dependency'.
+VERBOSE: Importing function 'Get-PSDependScript'.
+VERBOSE: Importing function 'Get-PSDependType'.
+VERBOSE: Importing function 'Import-Dependency'.
+VERBOSE: Importing function 'Install-Dependency'.
+VERBOSE: Importing function 'Invoke-DependencyScript'.
+VERBOSE: Importing function 'Invoke-PSDepend'.
+VERBOSE: Importing function 'Test-Dependency'.
+VERBOSE: Project Bootstrapped, returning to Invoke-Build
+True
+Current Process ID is '11600'
+VERBOSE: Importing file FlattenArray
+VERBOSE: Importing file Invoke-InternalPSDepend
+VERBOSE: Importing file Resolve-Dependency
+VERBOSE: Importing file Set-PSModulePath
+VERBOSE: Importing file Split-Array
+VERBOSE: Importing file Get-DatumNodesRecursive
+VERBOSE: Importing file Get-DscErrorMessage
+VERBOSE: Importing file Get-FilteredConfigurationData
+VERBOSE: Importing file Copy-DscMof
+VERBOSE: Importing file GetDscMofTagging
+VERBOSE: Importing file CleanBuildOutput
+VERBOSE: Importing file CleanDscConfigurationsFolder
+VERBOSE: Importing file CleanDscResourcesFolder
+VERBOSE: Importing file CompileDatumRsop
+VERBOSE: Importing file CompileRootConfiguration
+VERBOSE: Importing file CompileRootMetaMof
+VERBOSE: Importing file CompressModulesWithChecksum
+VERBOSE: Importing file Deploy
+VERBOSE: Importing file DownloadDependencies
+VERBOSE: Importing file DownloadDscConfigurations
+VERBOSE: Importing file Init
+VERBOSE: Importing file LoadDatumConfigData
+VERBOSE: Importing file NewMofChecksums
+VERBOSE: Importing file SetPsModulePath
+VERBOSE: Importing file TestBuildAcceptance
+VERBOSE: Importing file TestConfigData
+VERBOSE: Importing file TestDscResources
+VERBOSE: Importing file VersionControl
+VERBOSE: Populating RepositorySourceLocation property for module InvokeBuild.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\InvokeBuild\5.6.5\InvokeBuild.psm1'.
+VERBOSE: Populating RepositorySourceLocation property for module InvokeBuild.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\InvokeBuild\5.6.4\InvokeBuild.psm1'.
+Running the folling tasks:
+        Init
+        CleanBuildOutput
+        SetPsModulePath
+        LoadDatumConfigData
+        TestConfigData
+        VersionControl
+        CompileDatumRsop
+        TestDscResources
+        CompileRootConfiguration
+        CompileRootMetaMof
+
+Init, CleanBuildOutput, SetPsModulePath, LoadDatumConfigData, TestConfigData, VersionControl, CompileDatumRsop, TestDscResources, CompileRootConfigura
+tion, CompileRootMetaMof
+
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+
+===============================================================================
+                        INIT
+
+-------------------------------------------------------------------------------
+  /./Init
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\Init.ps1:1
+
+Build System Details:
+
+Name                           Value
+----                           -----
+BHProjectName                  DSC
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               2/8/2021 8:02:05 PM
+BHBuildSystem                  Unknown
+BHBuildNumber                  0
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+
+
+Done /./Init 00:00:00.0260043
+
+===============================================================================
+                        CLEANBUILDOUTPUT
+
+-------------------------------------------------------------------------------
+  /./CleanBuildOutput
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CleanBuildOutput.ps1:12
+
+Removing E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\*
+Done /./CleanBuildOutput 00:00:00.0960031
+
+===============================================================================
+                        DOWNLOADDSCCONFIGURATIONS
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDscConfigurations.ps1:1
+
+Pull dependencies from PSDepend.DscConfigurations.psd1
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscConfigurations 00:00:00.2250131
+
+===============================================================================
+                        DOWNLOADDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath/DownloadDependencies/DownloadDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\DownloadDependencies.ps1:3
+
+Done /./SetPsModulePath/DownloadDependencies/DownloadDscResources 00:00:02.7271552
+Done /./SetPsModulePath/DownloadDependencies 00:00:02.9581727
+
+===============================================================================
+                        SETPSMODULEPATH
+
+-------------------------------------------------------------------------------
+  /./SetPsModulePath
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\SetPsModulePath.ps1:5
+
+VERBOSE: Removing the imported "AddsDomain" function.
+VERBOSE: Removing the imported "AddsDomainController" function.
+VERBOSE: Removing the imported "AddsDomainUsers" function.
+VERBOSE: Removing the imported "AddsOrgUnitsAndGroups" function.
+VERBOSE: Removing the imported "AddsSitesSubnets" function.
+VERBOSE: Removing the imported "ChocolateyPackages" function.
+VERBOSE: Removing the imported "ComputerSettings" function.
+VERBOSE: Removing the imported "ConfigurationBase" function.
+VERBOSE: Removing the imported "New-DatumStructure" function.
+VERBOSE: Removing the imported "New-DatumFileProvider" function.
+VERBOSE: Removing the imported "Merge-Datum" function.
+VERBOSE: Removing the imported "Invoke-TestHandlerAction" function.
+VERBOSE: Removing the imported "Get-MergeStrategyFromPath" function.
+VERBOSE: Removing the imported "Get-FileProviderData" function.
+VERBOSE: Removing the imported "Get-DatumRsop" function.
+VERBOSE: Removing the imported "Resolve-Datum" function.
+VERBOSE: Removing the imported "Resolve-DatumPath" function.
+VERBOSE: Removing the imported "Test-TestHandlerFilter" function.
+VERBOSE: Removing the imported "DfsNamespaces" function.
+VERBOSE: Removing the imported "Disks" function.
+VERBOSE: Removing the imported "DnsServerAdZones" function.
+VERBOSE: Removing the imported "DnsServerConditionalForwarders" function.
+VERBOSE: Removing the imported "DnsServerRootHints" function.
+VERBOSE: Removing the imported "DnsServerSettings" function.
+VERBOSE: Removing the imported "Publish-DscConfiguration" function.
+VERBOSE: Removing the imported "Get-ModuleFromFolder" function.
+VERBOSE: Removing the imported "Get-DscResourceWmiClass" function.
+VERBOSE: Removing the imported "Get-DscResourceFromModuleInFolder" function.
+VERBOSE: Removing the imported "Get-DscFailedResource" function.
+VERBOSE: Removing the imported "Find-ModuleToPublish" function.
+VERBOSE: Removing the imported "Compress-DscResourceModule" function.
+VERBOSE: Removing the imported "Clear-CachedDscResource" function.
+VERBOSE: Removing the imported "Get-DscSplattedResource" function.
+VERBOSE: Removing the imported "Publish-DscResourceModule" function.
+VERBOSE: Removing the imported "Push-DscConfiguration" function.
+VERBOSE: Removing the imported "Push-DscModuleToNode" function.
+VERBOSE: Removing the imported "Remove-DscResourceWmiClass" function.
+VERBOSE: Removing the imported "Test-DscResourceFromModuleInFolderIsValid" function.
+VERBOSE: Removing the imported "x" alias.
+VERBOSE: Removing the imported "Update-DscConfiguration" function.
+VERBOSE: Removing the imported "Test-DscConfiguration" function.
+VERBOSE: Removing the imported "Stop-DscLocalConfigurationManager" function.
+VERBOSE: Removing the imported "Start-DscConfiguration" function.
+VERBOSE: Removing the imported "Get-DscTraceInformation" function.
+VERBOSE: Removing the imported "Get-DscOperationalEventLog" function.
+VERBOSE: Removing the imported "Get-DscLcmControllerSettings" function.
+VERBOSE: Removing the imported "Get-DscLcmControllerLog" function.
+VERBOSE: Removing the imported "Get-DscConfigurationVersion" function.
+VERBOSE: Removing the imported "DscDiagnostic" function.
+VERBOSE: Removing the imported "DscLcmController" function.
+VERBOSE: Removing the imported "DscLcmMaintenanceWindows" function.
+VERBOSE: Removing the imported "DscPullServer" function.
+VERBOSE: Removing the imported "DscPullServerSql" function.
+VERBOSE: Removing the imported "DscTagging" function.
+VERBOSE: Removing the imported "FilesAndFolders" function.
+VERBOSE: Removing the imported "FirewallProfiles" function.
+VERBOSE: Removing the imported "FirewallRules" function.
+VERBOSE: Removing the imported "GroupSet" function.
+VERBOSE: Removing the imported "IpConfiguration" function.
+VERBOSE: Removing the imported "JeaEndpoints" function.
+VERBOSE: Removing the imported "JeaRoles" function.
+VERBOSE: Removing the imported "Expand-Archive" function.
+VERBOSE: Removing the imported "Compress-Archive" function.
+VERBOSE: Removing the imported "stz" alias.
+VERBOSE: Removing the imported "scb" alias.
+VERBOSE: Removing the imported "gtz" alias.
+VERBOSE: Removing the imported "gin" alias.
+VERBOSE: Removing the imported "gcb" alias.
+VERBOSE: Removing the imported "New-TemporaryFile" function.
+VERBOSE: Removing the imported "New-Guid" function.
+VERBOSE: Removing the imported "Import-PowerShellDataFile" function.
+VERBOSE: Removing the imported "Get-FileHash" function.
+VERBOSE: Removing the imported "Format-Hex" function.
+VERBOSE: Removing the imported "ConvertFrom-SddlString" function.
+VERBOSE: Removing the imported "fhx" alias.
+VERBOSE: Removing the imported "CFS" alias.
+VERBOSE: Removing the imported "Network" function.
+VERBOSE: Removing the imported "NetworkIpConfiguration" function.
+VERBOSE: Removing the imported "Add-AssertionOperator" function.
+VERBOSE: Removing the imported "New-Fixture" function.
+VERBOSE: Removing the imported "New-MockObject" function.
+VERBOSE: Removing the imported "Should" function.
+VERBOSE: Removing the imported "Setup" function.
+VERBOSE: Removing the imported "Invoke-Mock" function.
+VERBOSE: Removing the imported "Invoke-Gherkin" function.
+VERBOSE: Removing the imported "BeforeAll" function.
+VERBOSE: Removing the imported "Invoke-Pester" function.
+VERBOSE: Removing the imported "Mock" function.
+VERBOSE: Removing the imported "Assert-VerifiableMocks" function.
+VERBOSE: Removing the imported "BeforeEach" function.
+VERBOSE: Removing the imported "Context" function.
+VERBOSE: Removing the imported "Set-TestInconclusive" function.
+VERBOSE: Removing the imported "Describe" function.
+VERBOSE: Removing the imported "It" function.
+VERBOSE: Removing the imported "Get-MockDynamicParameter" function.
+VERBOSE: Removing the imported "Find-GherkinStep" function.
+VERBOSE: Removing the imported "Assert-VerifiableMock" function.
+VERBOSE: Removing the imported "Get-ShouldOperator" function.
+VERBOSE: Removing the imported "AfterAll" function.
+VERBOSE: Removing the imported "AfterEach" function.
+VERBOSE: Removing the imported "Get-TestDriveItem" function.
+VERBOSE: Removing the imported "GherkinStep" function.
+VERBOSE: Removing the imported "Assert-MockCalled" function.
+VERBOSE: Removing the imported "AfterEachScenario" function.
+VERBOSE: Removing the imported "AfterEachFeature" function.
+VERBOSE: Removing the imported "In" function.
+VERBOSE: Removing the imported "BeforeEachScenario" function.
+VERBOSE: Removing the imported "BeforeEachFeature" function.
+VERBOSE: Removing the imported "InModuleScope" function.
+VERBOSE: Removing the imported "Set-ItResult" function.
+VERBOSE: Removing the imported "Set-DynamicParameterVariable" function.
+VERBOSE: Removing the imported "SafeGetCommand" function.
+VERBOSE: Removing the imported "New-PesterOption" function.
+VERBOSE: Removing the imported "And" alias.
+VERBOSE: Removing the imported "Add-ShouldOperator" alias.
+VERBOSE: Removing the imported "When" alias.
+VERBOSE: Removing the imported "Then" alias.
+VERBOSE: Removing the imported "Given" alias.
+VERBOSE: Removing the imported "But" alias.
+VERBOSE: Removing the imported "ConvertTo-Yaml" function.
+VERBOSE: Removing the imported "ConvertFrom-Yaml" function.
+VERBOSE: Removing the imported "cty" alias.
+VERBOSE: Removing the imported "cfy" alias.
+VERBOSE: Removing the imported "ProcessSet" function.
+VERBOSE: Removing the imported "Test-Dependency" function.
+VERBOSE: Removing the imported "Invoke-PSDepend" function.
+VERBOSE: Removing the imported "Invoke-DependencyScript" function.
+VERBOSE: Removing the imported "Import-Dependency" function.
+VERBOSE: Removing the imported "Install-Dependency" function.
+VERBOSE: Removing the imported "Get-Dependency" function.
+VERBOSE: Removing the imported "Get-PSDependScript" function.
+VERBOSE: Removing the imported "Get-PSDependType" function.
+VERBOSE: Removing the imported "Get-DscConfiguration" function.
+VERBOSE: Removing the imported "Enable-DscDebug" function.
+VERBOSE: Removing the imported "Disable-DscDebug" function.
+VERBOSE: Removing the imported "Configuration" function.
+VERBOSE: Removing the imported "Stop-DscConfiguration" function.
+VERBOSE: Removing the imported "Restore-DscConfiguration" function.
+VERBOSE: Removing the imported "Remove-DscConfigurationDocument" function.
+VERBOSE: Removing the imported "New-DscChecksum" function.
+VERBOSE: Removing the imported "Get-DscResource" function.
+VERBOSE: Removing the imported "Get-DscLocalConfigurationManager" function.
+VERBOSE: Removing the imported "Get-DscConfigurationStatus" function.
+VERBOSE: Removing the imported "gcfgs" alias.
+VERBOSE: Removing the imported "gcfg" alias.
+VERBOSE: Removing the imported "upcfg" alias.
+VERBOSE: Removing the imported "tcfg" alias.
+VERBOSE: Removing the imported "slcm" alias.
+VERBOSE: Removing the imported "sacfg" alias.
+VERBOSE: Removing the imported "rtcfg" alias.
+VERBOSE: Removing the imported "pbcfg" alias.
+VERBOSE: Removing the imported "glcm" alias.
+VERBOSE: Removing the imported "RegistryValues" function.
+VERBOSE: Removing the imported "Scripts" function.
+VERBOSE: Removing the imported "SecurityBase" function.
+VERBOSE: Removing the imported "ServiceSet" function.
+VERBOSE: Removing the imported "SoftwarePackages" function.
+VERBOSE: Removing the imported "HookGetViewAutoCompleter" function.
+VERBOSE: Removing the imported "Get-PowerCLIHelp" function.
+VERBOSE: Removing the imported "Get-PowerCLICommunity" function.
+VERBOSE: Removing the imported "Get-PSVersion" function.
+VERBOSE: Removing the imported "Get-InstallPath" function.
+VERBOSE: Removing the imported "Wds" function.
+VERBOSE: Removing the imported "WebApplicationPools" function.
+VERBOSE: Removing the imported "WebApplications" function.
+VERBOSE: Removing the imported "WebSites" function.
+VERBOSE: Removing the imported "WebVirtualDirectories" function.
+VERBOSE: Removing the imported "WindowsEventLogs" function.
+VERBOSE: Removing the imported "WindowsFeatures" function.
+VERBOSE: Removing the imported "WindowsFeatureSet" function.
+VERBOSE: Removing the imported "WindowsOptionalFeatureSet" function.
+VERBOSE: Removing the imported "BuildResourceString" function.
+VERBOSE: Removing the imported "BuildResourceCommonParameters" function.
+VERBOSE: Removing the imported "WindowsServices" function.
+VERBOSE: Removing the imported "Import-xDscSchema" function.
+VERBOSE: Removing the imported "Update-xDscResource" function.
+VERBOSE: Removing the imported "Test-xDscSchema" function.
+VERBOSE: Removing the imported "Test-xDscResource" function.
+VERBOSE: Removing the imported "New-xDscResourceProperty" function.
+VERBOSE: Removing the imported "New-xDscResource" function.
+VERBOSE: Removing the imported "xFileUpload" function.
+VERBOSE: Removing the imported "xGroupSet" function.
+VERBOSE: Removing the imported "XmlContent" function.
+VERBOSE: Removing the imported "xProcessSet" function.
+VERBOSE: Removing the imported "xServiceSet" function.
+VERBOSE: Removing the imported "xWindowsFeatureSet" function.
+VERBOSE: Removing the imported "Get-LocalizedData" function.
+VERBOSE: Removing the imported "New-InvalidArgumentException" function.
+VERBOSE: Removing the imported "New-InvalidOperationException" function.
+VERBOSE: Removing the imported "New-InvalidResultException" function.
+VERBOSE: Removing the imported "New-NotImplementedException" function.
+VERBOSE: Removing the imported "New-ObjectNotFoundException" function.
+VERBOSE: Removing the imported "New-ResourceSetCommonParameterString" function.
+VERBOSE: Removing the imported "New-ResourceSetConfigurationScriptBlock" function.
+VERBOSE: Removing the imported "New-ResourceSetConfigurationString" function.
+VERBOSE: Removing the imported "Set-DscMachineRebootRequired" function.
+VERBOSE: Removing the imported "xWindowsOptionalFeatureSet" function.
+VERBOSE: Removing the imported "Test-IsNanoServer" function.
+VERBOSE: Removing the imported "Test-DscParameterState" function.
+VERBOSE: Removing the imported "Test-CommandExists" function.
+VERBOSE: Removing the imported "New-InvalidDataException" function.
+
+
+PSModulePath:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+
+
+Done /./SetPsModulePath 00:00:04.2262439
+
+===============================================================================
+                        LOADDATUMCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./LoadDatumConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\LoadDatumConfigData.ps1:1
+
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PowerShell-Yaml\0.4.2\PowerShell-Yaml.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module PowerShell-Yaml.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PowerShell-Yaml\0.4.2\Load-Assemblies.ps1'.
+VERBOSE: Dot-sourcing the script file 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PowerShell-Yaml\0.4.2\Load-Assemblies.ps1'.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\PowerShell-Yaml\0.4.2\powershell-yaml.psm1'.
+VERBOSE: Importing function 'ConvertFrom-Yaml'.
+VERBOSE: Importing function 'ConvertTo-Yaml'.
+VERBOSE: Importing alias 'cfy'.
+VERBOSE: Importing alias 'cty'.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\Datum\0.39.0\Datum.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module Datum.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\Datum\0.39.0\ScriptsToProcess\Resolve-NodeProperty.ps1'.
+VERBOSE: Dot-sourcing the script file 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\Datum\0.39.0\ScriptsToProcess\Resolve-NodeProperty.ps1'.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\Datum\0.39.0\datum.psm1'.
+VERBOSE: Exporting function 'Compare-Hashtable'.
+VERBOSE: Exporting function 'ConvertTo-Datum'.
+VERBOSE: Exporting function 'Get-DatumType'.
+VERBOSE: Exporting function 'Get-MergeStrategyFromString'.
+VERBOSE: Exporting function 'Merge-DatumArray'.
+VERBOSE: Exporting function 'Merge-Hashtable'.
+VERBOSE: Exporting function 'Get-DatumRsop'.
+VERBOSE: Exporting function 'Get-FileProviderData'.
+VERBOSE: Exporting function 'Get-MergeStrategyFromPath'.
+VERBOSE: Exporting function 'Invoke-TestHandlerAction'.
+VERBOSE: Exporting function 'Merge-Datum'.
+VERBOSE: Exporting function 'New-DatumFileProvider'.
+VERBOSE: Exporting function 'New-DatumStructure'.
+VERBOSE: Exporting function 'Resolve-Datum'.
+VERBOSE: Exporting function 'Resolve-DatumPath'.
+VERBOSE: Exporting function 'Test-TestHandlerFilter'.
+VERBOSE: Importing function 'Get-DatumRsop'.
+VERBOSE: Importing function 'Get-FileProviderData'.
+VERBOSE: Importing function 'Get-MergeStrategyFromPath'.
+VERBOSE: Importing function 'Invoke-TestHandlerAction'.
+VERBOSE: Importing function 'Merge-Datum'.
+VERBOSE: Importing function 'New-DatumFileProvider'.
+VERBOSE: Importing function 'New-DatumStructure'.
+VERBOSE: Importing function 'Resolve-Datum'.
+VERBOSE: Importing function 'Resolve-DatumPath'.
+VERBOSE: Importing function 'Test-TestHandlerFilter'.
+Loading Datum Definition from 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData\Datum.yml'
+Node count: 1
+Done /./LoadDatumConfigData 00:00:00.4860259
+
+===============================================================================
+                        TESTCONFIGDATA
+
+-------------------------------------------------------------------------------
+  /./TestConfigData
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestConfigData.ps1:1
+
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\IntegrationTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 1
+VERBOSE:  Result found for Configurations
+Tests completed in 1.62s
+Tests Passed: 36, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestConfigData 00:00:02.1301211
+
+===============================================================================
+                        VERSIONCONTROL
+
+-------------------------------------------------------------------------------
+  /./VersionControl
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\VersionControl.ps1:1
+
+Done /./VersionControl 00:00:00.0119994
+
+===============================================================================
+                        COMPILEDATUMRSOP
+
+-------------------------------------------------------------------------------
+  /./CompileDatumRsop
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileDatumRsop.ps1:6
+
+Generating RSOP output for 1 nodes.
+VERBOSE:  Result found for Configurations
+VERBOSE:  Result found for FilesAndFolders
+VERBOSE:  Result found for SecurityBase
+VERBOSE:  Result found for WindowsFeatures
+VERBOSE:  Result found for IpConfiguration
+VERBOSE:  Result found for ChocolateyPackages
+VERBOSE:  Result found for RegistryValues
+VERBOSE:  Result found for DscLcmController
+VERBOSE:  Result found for DscLcmMaintenanceWindows
+VERBOSE:  Result found for DscTagging
+Done /./CompileDatumRsop 00:00:00.7100378
+
+===============================================================================
+                        TESTDSCRESOURCES
+
+-------------------------------------------------------------------------------
+  /./TestDscResources
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\TestDscResources.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+------------------------------------------------------------
+Currently loaded modules:
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+C:\Windows\System32\WindowsPowerShell\v1.0\Modules
+------------------------------------------------------------
+The 'CommonTasks' module provides the following configurations (DSC Composite Resources)
+VERBOSE: Populating RepositorySourceLocation property for module CommonTasks.
+ResourceCount 41
+ResourceCount matches (41)
+------------------------------------------------------------
+Known DSC Composite Resources
+------------------------------------------------------------
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------
+Composite       AddsDomain                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainFQDN, D...
+Composite       AddsDomainController      CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, DomainName, C...
+Composite       AddsDomainUsers           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Users}
+Composite       AddsOrgUnitsAndGroups     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, OrgUnits, Gro...
+Composite       AddsSitesSubnets          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Sites, Subnets}
+Composite       ChocolateyPackages        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Software, Sou...
+Composite       ComputerSettings          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Descrip...
+Composite       ConfigurationBase         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, SystemType}
+Composite       DfsNamespaces             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NamespaceConf...
+Composite       Disks                     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Disks}
+Composite       DnsServerAdZones          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, AdZones, Doma...
+Composite       DnsServerConditionalFo... CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, ConditionalFo...
+Composite       DnsServerRootHints        CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RootHints}
+Composite       DnsServerSettings         CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Settings}
+Composite       DscDiagnostic             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential}
+Composite       DscLcmController          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscLcmMaintenanceWindows  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, MaintenanceWi...
+Composite       DscPullServer             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscPullServerSql          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, CertificateTh...
+Composite       DscTagging                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Version, Envi...
+Composite       FilesAndFolders           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       FirewallProfiles          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Profile}
+Composite       FirewallRules             CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Rules}
+Composite       IpConfiguration           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Adapter}
+Composite       JeaEndpoints              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Endpoints}
+Composite       JeaRoles                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Roles}
+Composite       Network                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, NetworkZone, ...
+Composite       NetworkIpConfiguration    CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, IpAddress, Pr...
+Composite       RegistryValues            CommonTasks                    0.3.105    {Values}
+Composite       Scripts                   CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       SecurityBase              CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Role}
+Composite       SoftwarePackages          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Packages}
+Composite       Wds                       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, RemInstPath, ...
+Composite       WebApplicationPools       CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebApplications           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebSites                  CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WebVirtualDirectories     CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Items}
+Composite       WindowsEventLogs          CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Logs}
+Composite       WindowsFeatures           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Name, Source}
+Composite       WindowsServices           CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, Services}
+Composite       XmlContent                CommonTasks                    0.3.105    {DependsOn, PsDscRunAsCredential, XmlData}
+
+
+
+------------------------------------------------------------
+Known DSC Resources
+------------------------------------------------------------
+
+@{Name=DFSDsc, 4.4.0.0; Count=7}
+@{Name=xPSDesiredStateConfiguration, 9.1.0; Count=22}
+@{Name=xWebAdministration, 3.2.0; Count=16}
+@{Name=ComputerManagementDsc, 8.4.0; Count=16}
+@{Name=XmlContentDsc, 0.0.1; Count=1}
+@{Name=chocolatey, 0.0.79; Count=6}
+@{Name=ActiveDirectoryDsc, 6.0.1; Count=22}
+@{Name=WdsDsc, 0.11.0; Count=4}
+@{Name=JeaDsc, 0.7.2; Count=2}
+@{Name=xFailOverCluster, 1.14.1; Count=7}
+@{Name=xDnsServer, 1.16.0.0; Count=14}
+@{Name=xDhcpServer, 2.0.0.0; Count=10}
+@{Name=StorageDsc, 5.0.1; Count=6}
+@{Name=SecurityPolicyDsc, 2.10.0.0; Count=4}
+@{Name=NetworkingDsc, 8.2.0; Count=27}
+------------------------------------------------------------
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\TestDscResources.log
+Done /./TestDscResources 00:00:19.1701024
+
+===============================================================================
+                        COMPILEROOTCONFIGURATION
+
+-------------------------------------------------------------------------------
+  /./CompileRootConfiguration
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootConfiguration.ps1:1
+
+Transcript started, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\DscBuildHelpers\0.0.42\DscBuildHelpers.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module xDSCResourceDesigner.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\xDSCResourceDesigner\1.9.0.0\xDSCResourceDesigner.psm1'.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\xDscResourceDesigner\1.9.0.0\xDscResourceDesigner.psd1'.
+VERBOSE: Populating RepositorySourceLocation property for module xDscResourceDesigner.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\xDscResourceDesigner\1.9.0.0\xDSCResourceDesigner.psm1'.
+VERBOSE: Exporting function 'New-xDscResourceProperty'.
+VERBOSE: Exporting function 'Test-Name'.
+VERBOSE: Exporting function 'Test-PropertiesForResource'.
+VERBOSE: Exporting function 'New-xDscResource'.
+VERBOSE: Exporting function 'New-DscManifest'.
+VERBOSE: Exporting function 'New-DscSchema'.
+VERBOSE: Exporting function 'Get-TypeNameForSchema'.
+VERBOSE: Exporting function 'Test-TypeIsArray'.
+VERBOSE: Exporting function 'New-DscSchemaParameter'.
+VERBOSE: Exporting function 'New-DelimitedList'.
+VERBOSE: Exporting function 'New-DscModule'.
+VERBOSE: Exporting function 'New-GetTargetResourceFunction'.
+VERBOSE: Exporting function 'New-SetTargetResourceFunction'.
+VERBOSE: Exporting function 'New-TestTargetResourceFunction'.
+VERBOSE: Exporting function 'New-DscModuleFunction'.
+VERBOSE: Exporting function 'New-DscModuleParameter'.
+VERBOSE: Exporting function 'New-DscModuleReturn'.
+VERBOSE: Exporting function 'Add-StringBuilderLine'.
+VERBOSE: Exporting function 'Get-FunctionParamLineNumbers'.
+VERBOSE: Exporting function 'Get-ContentFromFunctions'.
+VERBOSE: Exporting function 'Update-DscModule'.
+VERBOSE: Exporting function 'Update-xDscResource'.
+VERBOSE: Exporting function 'Convert-LineNumberToIndex'.
+VERBOSE: Exporting function 'Get-SortedFunctionNames'.
+VERBOSE: Exporting function 'Test-ResourcePath'.
+VERBOSE: Exporting function 'Test-xDscResource'.
+VERBOSE: Exporting function 'Test-GetKeyRequiredMandatory'.
+VERBOSE: Exporting function 'Test-SetHasExactlyAllNonReadProperties'.
+VERBOSE: Exporting function 'Test-FunctionTakesNoReads'.
+VERBOSE: Exporting function 'Test-ParameterMetaDataIsDscResourceProperty'.
+VERBOSE: Exporting function 'Test-SchemaProperty'.
+VERBOSE: Exporting function 'Test-MockSchema'.
+VERBOSE: Exporting function 'Test-TestHarness'.
+VERBOSE: Exporting function 'Test-xDscSchemaEncoding'.
+VERBOSE: Exporting function 'Test-xDscSchema'.
+VERBOSE: Exporting function 'Test-xDscSchemaInternal'.
+VERBOSE: Exporting function 'Test-DscResourceModule'.
+VERBOSE: Exporting function 'Test-GetSubsetSet'.
+VERBOSE: Exporting function 'Test-ParametersAreIdentical'.
+VERBOSE: Exporting function 'Test-ParameterIsMandatory'.
+VERBOSE: Exporting function 'Test-ParametersValidateSet'.
+VERBOSE: Exporting function 'Get-ValidateSet'.
+VERBOSE: Exporting function 'Test-BasicDscFunction'.
+VERBOSE: Exporting function 'Test-SetTestIdentical'.
+VERBOSE: Exporting function 'Test-AdministratorPrivileges'.
+VERBOSE: Exporting function 'Convert-SchemaToResourceProperty'.
+VERBOSE: Exporting function 'Convert-CimAttribute'.
+VERBOSE: Exporting function 'Convert-CimType'.
+VERBOSE: Exporting function 'Import-xDscSchema'.
+VERBOSE: Exporting function 'IsCommonParameter'.
+VERBOSE: Importing function 'Import-xDscSchema'.
+VERBOSE: Importing function 'New-xDscResource'.
+VERBOSE: Importing function 'New-xDscResourceProperty'.
+VERBOSE: Importing function 'Test-xDscResource'.
+VERBOSE: Importing function 'Test-xDscSchema'.
+VERBOSE: Importing function 'Update-xDscResource'.
+VERBOSE: Populating RepositorySourceLocation property for module DscBuildHelpers.
+VERBOSE: Loading module from path
+'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\DscBuildHelpers\0.0.42\ScriptsToProcess\Get-DscSplattedResource.ps1'.
+VERBOSE: Dot-sourcing the script file
+'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\DscBuildHelpers\0.0.42\ScriptsToProcess\Get-DscSplattedResource.ps1'.
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\DscBuildHelpers\0.0.42\DscBuildHelpers.psm1'.
+VERBOSE: Exporting function 'Assert-DscModuleResourceIsValid'.
+VERBOSE: Exporting function 'Get-RequiredModulesFromMOF'.
+VERBOSE: Exporting function 'Resolve-ModuleMetadataFile'.
+VERBOSE: Exporting function 'Clear-CachedDscResource'.
+VERBOSE: Exporting function 'Compress-DscResourceModule'.
+VERBOSE: Exporting function 'Find-ModuleToPublish'.
+VERBOSE: Exporting function 'Get-DscFailedResource'.
+VERBOSE: Exporting function 'Get-DscResourceFromModuleInFolder'.
+VERBOSE: Exporting function 'Get-DscResourceWmiClass'.
+VERBOSE: Exporting function 'Get-ModuleFromFolder'.
+VERBOSE: Exporting function 'Publish-DscConfiguration'.
+VERBOSE: Exporting function 'Publish-DscResourceModule'.
+VERBOSE: Exporting function 'Push-DscConfiguration'.
+VERBOSE: Exporting function 'Push-DscModuleToNode'.
+VERBOSE: Exporting function 'Remove-DscResourceWmiClass'.
+VERBOSE: Exporting function 'Test-DscResourceFromModuleInFolderIsValid'.
+VERBOSE: Importing function 'Clear-CachedDscResource'.
+VERBOSE: Importing function 'Compress-DscResourceModule'.
+VERBOSE: Importing function 'Find-ModuleToPublish'.
+VERBOSE: Importing function 'Get-DscFailedResource'.
+VERBOSE: Importing function 'Get-DscResourceFromModuleInFolder'.
+VERBOSE: Importing function 'Get-DscResourceWmiClass'.
+VERBOSE: Importing function 'Get-ModuleFromFolder'.
+VERBOSE: Importing function 'Publish-DscConfiguration'.
+VERBOSE: Importing function 'Publish-DscResourceModule'.
+VERBOSE: Importing function 'Push-DscConfiguration'.
+VERBOSE: Importing function 'Push-DscModuleToNode'.
+VERBOSE: Importing function 'Remove-DscResourceWmiClass'.
+VERBOSE: Importing function 'Test-DscResourceFromModuleInFolderIsValid'.
+
+---------------------------------------------------------------------------
+v26267ncec202 : v26267ncec202 : MOF__0.0.0 Test
+VERBOSE:  Result found for Configurations
+VERBOSE:  Result found for FilesAndFolders
+    v26267ncec202 : FileServer ::> FilesAndFolders .................................................OK
+VERBOSE:  Result found for SecurityBase
+    v26267ncec202 : FileServer ::> SecurityBase ....................................................OK
+VERBOSE:  Result found for WindowsFeatures
+    v26267ncec202 : FileServer ::> WindowsFeatures .................................................OK
+VERBOSE:  Result found for IpConfiguration
+    v26267ncec202 : FileServer ::> IpConfiguration .................................................OK
+VERBOSE:  Result found for ChocolateyPackages
+    v26267ncec202 : FileServer ::> ChocolateyPackages ..............................................OK
+VERBOSE:  Result found for RegistryValues
+    v26267ncec202 : FileServer ::> RegistryValues ..................................................OK
+VERBOSE:  Result found for DscLcmController
+    v26267ncec202 : FileServer ::> DscLcmController ................................................OK
+VERBOSE:  Result found for DscLcmMaintenanceWindows
+    v26267ncec202 : FileServer ::> DscLcmMaintenanceWindows ........................................OK
+VERBOSE:  Result found for DscTagging
+    v26267ncec202 : FileServer ::> DscTagging ......................................................OK
+Successfully compiled 1 MOF files
+Transcript stopped, output file is E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Logs\CompileRootConfiguration.log
+Done /./CompileRootConfiguration 00:00:09.5095467
+
+===============================================================================
+                        COMPILEROOTMETAMOF
+
+-------------------------------------------------------------------------------
+  /./CompileRootMetaMof
+  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build\Tasks\CompileRootMetaMof.ps1:1
+
+VERBOSE: Loading module from path 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules\DscBuildHelpers\0.0.42\DscBuildHelpers.psd1'.
+VERBOSE: Importing function 'Clear-CachedDscResource'.
+VERBOSE: Importing function 'Compress-DscResourceModule'.
+VERBOSE: Importing function 'Find-ModuleToPublish'.
+VERBOSE: Importing function 'Get-DscFailedResource'.
+VERBOSE: Importing function 'Get-DscResourceFromModuleInFolder'.
+VERBOSE: Importing function 'Get-DscResourceWmiClass'.
+VERBOSE: Importing function 'Get-ModuleFromFolder'.
+VERBOSE: Importing function 'Publish-DscConfiguration'.
+VERBOSE: Importing function 'Publish-DscResourceModule'.
+VERBOSE: Importing function 'Push-DscConfiguration'.
+VERBOSE: Importing function 'Push-DscModuleToNode'.
+VERBOSE: Importing function 'Remove-DscResourceWmiClass'.
+VERBOSE: Importing function 'Test-DscResourceFromModuleInFolderIsValid'.
+VERBOSE:  Result found for LcmConfig\Settings
+VERBOSE:  Result found for LcmConfig\ConfigurationRepositoryWeb
+VERBOSE:  Result found for LcmConfig\ReportServerWeb
+WARNING: A ConfigurationRepository is specified without setting the refresh mode into PULL.
+Successfully compiled 1 Meta MOF files.
+Done /./CompileRootMetaMof 00:00:00.6070336
+Done /. 00:00:37.0471330
+Build succeeded. 14 tasks, 0 errors, 0 warnings 00:00:37.2771488
+VERBOSE: Importing file FlattenArray
+VERBOSE: Importing file Invoke-InternalPSDepend
+VERBOSE: Importing file Resolve-Dependency
+VERBOSE: Importing file Set-PSModulePath
+VERBOSE: Importing file Split-Array
+VERBOSE: Importing file Get-DatumNodesRecursive
+VERBOSE: Importing file Get-DscErrorMessage
+VERBOSE: Importing file Get-FilteredConfigurationData
+VERBOSE: Importing file Copy-DscMof
+VERBOSE: Importing file GetDscMofTagging
+VERBOSE: Importing file CleanBuildOutput
+VERBOSE: Importing file CleanDscConfigurationsFolder
+VERBOSE: Importing file CleanDscResourcesFolder
+VERBOSE: Importing file CompileDatumRsop
+VERBOSE: Importing file CompileRootConfiguration
+VERBOSE: Importing file CompileRootMetaMof
+VERBOSE: Importing file CompressModulesWithChecksum
+VERBOSE: Importing file Deploy
+VERBOSE: Importing file DownloadDependencies
+VERBOSE: Importing file DownloadDscConfigurations
+VERBOSE: Importing file Init
+VERBOSE: Importing file LoadDatumConfigData
+VERBOSE: Importing file NewMofChecksums
+VERBOSE: Importing file SetPsModulePath
+VERBOSE: Importing file TestBuildAcceptance
+VERBOSE: Importing file TestConfigData
+VERBOSE: Importing file TestDscResources
+VERBOSE: Importing file VersionControl
+Build . E:\CHIZ\DSC\Try2\DscWorkshop\DSC\PostBuild.ps1
+Task /./NewMofChecksums
+Done /./NewMofChecksums 00:00:00.0110008
+Task /./CompressModulesWithChecksum
+Done /./CompressModulesWithChecksum 00:00:28.7726527
+Task /./Deploy
+Starting deployment with files inside 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput'
+Done /./Deploy 00:00:00.0080008
+Task /./TestBuildAcceptance
+testResultsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\BuildAcceptanceTestResults.xml
+testsPath is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+BuildOutput is: E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+Node count: 1
+VERBOSE: MOF File Count 1
+VERBOSE: Node Count 1
+VERBOSE: Meta MOF File Count 1
+VERBOSE: Node Count 1
+Node count: 1
+Tests completed in 284ms
+Tests Passed: 4, Failed: 0, Skipped: 0, Pending: 0, Inconclusive: 0
+Done /./TestBuildAcceptance 00:00:00.4450256
+Done /. 00:00:29.2556903
+Build succeeded. 5 tasks, 0 errors, 0 warnings 00:00:29.4956986
+Created 1 MOF files in 'E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput/MOF'
+------------------------------------
+PowerShell Variables
+
+Name                           Value
+----                           -----
+$                              v26267ncec202
+?                              True
+^                              .\Push-DscTo.ps1
+args                           {}
+buildModulesPath               E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput\Modules
+BuildOutput                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+ConfigDataFolder               DscConfigData
+configDataPath                 E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigData
+configurationData              {AllNodes, Datum}
+configurationPath              E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations
+ConfigurationsFolder           DscConfigurations
+ConfirmPreference              High
+ConsoleFileName
+CurrentJobNumber               1
+datum                          {AllNodes, Environment, Locations, Roles...}
+datumInvokeCommandRegEx        \[x=(?<Content>.+)]
+DebugPreference                SilentlyContinue
+DownloadResourcesAndConfigu... False
+Error                          {}
+ErrorActionPreference          Continue
+ErrorView                      NormalView
+ExecutionContext               System.Management.Automation.EngineIntrinsics
+false                          False
+Filter
+FormatEnumerationLimit         4
+GalleryProxy
+Help                           False
+HOME                           C:\Users\kevin.weinrich
+Host                           System.Management.Automation.Internal.Host.InternalHost
+InformationPreference          SilentlyContinue
+input                          {}
+LASTEXITCODE                   0
+MaximumAliasCount              4096
+MaximumDriveCount              4096
+MaximumErrorCount              256
+MaximumFunctionCount           4096
+MaximumHistoryCount            4096
+MaximumVariableCount           4096
+mofFileCount                   1
+MyInvocation                   System.Management.Automation.InvocationInfo
+NestedPromptLevel              0
+node                           {Name, Description, LcmConfig, Role...}
+null
+OutputEncoding                 System.Text.ASCIIEncoding
+pathElements                   {C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\ProgramData\Oracle\Java\javapath, C:\Windows\system32...
+PID                            11600
+PROFILE                        C:\Users\kevin.weinrich\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+ProgressPreference             Continue
+ProjectPath                    E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSBoundParameters              {[DownloadResourcesAndConfigurations, True], [Verbose, True]}
+PSCmdlet                       System.Management.Automation.PSScriptCmdlet
+PSCommandPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Build.ps1
+PSCulture                      en-US
+PSDefaultParameterValues       {}
+PSEdition                      Desktop
+PSEmailServer
+PSGetPath                      @{AllUsersModules=C:\Program Files\WindowsPowerShell\Modules; AllUsersScripts=C:\Program Files\WindowsPowerShell\Sc...
+PSHOME                         C:\Windows\System32\WindowsPowerShell\v1.0
+psModulePathElemets            {E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations, E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources, E:\CHIZ\DSC\Try...
+PSScriptRoot                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+PSSessionApplicationName       wsman
+PSSessionConfigurationName     http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+PSSessionOption                System.Management.Automation.Remoting.PSSessionOption
+PSUICulture                    en-US
+PSVersionTable                 {PSVersion, PSEdition, PSCompatibleVersions, BuildVersion...}
+PWD                            E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+Repository                     PSGallery
+ResolveDependency              True
+resourcePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources
+ResourcesFolder                DscResources
+ShellId                        Microsoft.PowerShell
+StackTrace                        at System.Management.Automation.EnumMinimumDisambiguation.EnumDisambiguate(String text, Type enumType)...
+TaskHeader                     ...
+Tasks
+TestFolder                     Tests
+testsPath                      E:\CHIZ\DSC\Try2\DscWorkshop\DSC\Tests
+TotalJobCount                  1
+true                           True
+UidUtil                        VMware.VimAutomation.ViCore.Cmdlets.Utilities.UidUtil
+VerbosePreference              Continue
+WarningPreference              Continue
+WhatIfPreference               False
+
+
+
+------------------------------------
+Environment Variables
+
+Name                           Value
+----                           -----
+AIM_PATH                       C:\Program Files (x86)\Avaya\Required Components
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\kevin.weinrich\AppData\Roaming
+BHBuildNumber                  0
+BHBuildOutput                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC\BuildOutput
+BHBuildStartTime               2/8/2021 8:02:05 PM
+BHBuildSystem                  Unknown
+BHProjectName                  DSC
+BHProjectPath                  E:\CHIZ\DSC\Try2\DscWorkshop\DSC
+ChocolateyInstall              C:\ProgramData\chocolatey
+ChocolateyLastPathUpdate       132526985146079089
+CLIENTNAME                     D26265VWKWEINRI
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   V26265NCHH500
+ComSpec                        C:\Windows\system32\cmd.exe
+DEFLOGDIR                      C:\ProgramData\McAfee\Endpoint Security\Logs
+DSA_PATH                       C:\Program Files (x86)\Avaya\Site Administration\bin\asa.exe
+FP_NO_HOST_CHECK               NO
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\kevin.weinrich
+LOCALAPPDATA                   C:\Users\kevin.weinrich\AppData\Local
+LOGONSERVER                    \\V1818TNCYT603
+NUMBER_OF_PROCESSORS           9
+OS                             Windows_NT
+Path                           C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           AMD64 Family 23 Model 49 Stepping 0, AuthenticAMD
+PROCESSOR_LEVEL                23
+PROCESSOR_REVISION             3100
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PROMPT                         $P$G
+PROP_PATH                      C:\Program Files (x86)\Avaya\Required Components
+PSModulePath                   E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscConfigurations;E:\CHIZ\DSC\Try2\DscWorkshop\DSC\DscResources;E:\CHIZ\DSC\Try2\D...
+PUBLIC                         C:\Users\Public
+SA_PATH                        C:\Program Files (x86)\Avaya\Site Administration
+SESSIONNAME                    RDP-Tcp#6
+SMS_ADMIN_UI_PATH              C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\i386
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\KEVIN~1.WEI\AppData\Local\Temp\2
+TMP                            C:\Users\KEVIN~1.WEI\AppData\Local\Temp\2
+UATDATA                        C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN                  AA.AD.EPA.GOV
+USERDOMAIN                     AA
+USERDOMAIN_ROAMINGPROFILE      AA
+USERNAME                       kevin.weinrich
+USERPROFILE                    C:\Users\kevin.weinrich
+windir                         C:\Windows
+WiX                            C:\Program Files (x86)\Windows Installer XML v3.5\
+
+
+
+------------------------------------
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC> .\Push-DscTo.ps1 -computer v26267ncec202
+
+
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : 0AA44FC0-6809-11EB-9EA9-0050569E8E39
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {All}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : PendingConfiguration
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec202
+PSComputerName                 : v26267ncec202
+
+VERBOSE: Performing the operation "Start-DscConfiguration: SendMetaConfigurationApply" on target "MSFT_DSCLocalConfigurationManager".
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendMetaConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC202 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]  [MSFT_DSCMetaConfiguration]  in 0.0150 seconds.
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Resource ]  [MSFT_DSCMetaConfiguration]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]
+Registration of the Dsc Agent with the server https://dscpull01.contoso.com:8080/PSDSCPullServer.svc failed. The underlying error is: Failed to
+register Dsc Agent with AgentId 0AA44FC0-6809-11EB-9EA9-0050569E8E39 with the server
+https://dscpull01.contoso.com:8080/PSDSCPullServer.svc/Nodes(AgentId='0AA44FC0-6809-11EB-9EA9-0050569E8E39'). .
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : RegisterDscAgentCommandFailed,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
+    + PSComputerName        : v26267ncec202
+
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Set-DscLocalConfigurationManager finished in 0.469 seconds.
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : 0AA44FC0-6809-11EB-9EA9-0050569E8E39
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {All}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : PendingConfiguration
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec202
+PSComputerName                 : v26267ncec202
+
+VERBOSE: Performing the operation "Applying MOF e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\MOF\v26267ncec202.mof" on target "v26267ncec202".
+VERBOSE: Module match: cChoco
+VERBOSE: Module match: chocolatey
+VERBOSE: Module match: ComputerManagementDsc
+VERBOSE: Module match: datum
+VERBOSE: Module match: DscBuildHelpers
+VERBOSE: Module match: JeaDsc
+VERBOSE: Module match: powershell-yaml
+VERBOSE: Module match: SecurityPolicyDsc
+VERBOSE: Module match: StorageDsc
+VERBOSE: Module match: xDscDiagnostics
+VERBOSE: Module match: xDSCResourceDesigner
+VERBOSE: Module match: xNetworking
+VERBOSE: Module match: xPSDesiredStateConfiguration
+VERBOSE: The Missing modules are
+VERBOSE: looking for missing zip modules in e:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+
+PSPath            : Microsoft.PowerShell.Core\FileSystem::E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+PSParentPath      : Microsoft.PowerShell.Core\FileSystem::E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput
+PSChildName       : ModulesNew
+PSDrive           : E
+PSProvider        : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer     : True
+Name              : ModulesNew
+FullName          : E:\chiz\dsc\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew
+Parent            : BuildOutput
+Exists            : True
+Root              : E:\
+Extension         :
+CreationTime      : 2/8/2021 8:03:59 PM
+CreationTimeUtc   : 2/9/2021 1:03:59 AM
+LastAccessTime    : 2/8/2021 8:03:59 PM
+LastAccessTimeUtc : 2/9/2021 1:03:59 AM
+LastWriteTime     : 2/8/2021 8:03:59 PM
+LastWriteTimeUtc  : 2/9/2021 1:03:59 AM
+Attributes        : Directory
+Mode              : d-----
+BaseName          : ModulesNew
+Target            : {E:\RF-RTP-DS1A\DSC\Try2\DscWorkshop\DSC\BuildOutput\ModulesNew}
+LinkType          :
+
+VERBOSE: Expanding C:\temp/*.zip to C:\Program Files\Common Files\WindowsPowerShell\Modules\cChoco chocolatey ComputerManagementDsc datum
+DscBuildHelpers JeaDsc powershell-yaml SecurityPolicyDsc StorageDsc xDscDiagnostics xDSCResourceDesigner xNetworking
+xPSDesiredStateConfiguration\2.4.1.0 0.0.79 8.4.0 0.39.0 0.0.42 0.7.2 0.4.2 2.10.0.0 5.0.1 2.8.0 1.9.0.0 5.7.0.0 9.1.0
+VERBOSE: Removing previously pushed configuration documents
+VERBOSE: Attempting to apply C:\temp\localhost.mof on v26267ncec202
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' =
+MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer V26267NCEC202 with user sid S-1-5-21-1339303556-449845944-1601390327-20111.
+VERBOSE: [V26267NCEC202]: LCM:  [ Start  Set      ]
+VERBOSE: [V26267NCEC202]: LCM:  [ End    Set      ]
+Failed to get the module NetworkingDsc_8.2.0 from server
+https://dscpull01.contoso.com:8080/PSDSCPullServer.svc/Modules(ModuleName='NetworkingDsc',ModuleVersion='8.2.0')/ModuleContent. Could not install
+module dependencies needed by the configuration.
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : WebDownloadManagerGetModuleFailed,Microsoft.PowerShell.DesiredStateConfiguration.Commands.GetDscModuleCommand
+    + PSComputerName        : v26267ncec202
+
+ActionAfterReboot              : ContinueConfiguration
+AgentId                        : 0AA44FC0-6809-11EB-9EA9-0050569E8E39
+AllowModuleOverWrite           : True
+CertificateID                  :
+ConfigurationDownloadManagers  : {[ConfigurationRepositoryWeb]Server}
+ConfigurationID                :
+ConfigurationMode              : ApplyAndMonitor
+ConfigurationModeFrequencyMins : 30
+Credential                     :
+DebugMode                      : {All}
+DownloadManagerCustomData      :
+DownloadManagerName            :
+LCMCompatibleVersions          : {1.0, 2.0}
+LCMState                       : PendingConfiguration
+LCMStateDetail                 :
+LCMVersion                     : 2.0
+StatusRetentionTimeInDays      : 10
+SignatureValidationPolicy      : NONE
+SignatureValidations           : {}
+MaximumDownloadSizeMB          : 500
+PartialConfigurations          :
+RebootNodeIfNeeded             : True
+RefreshFrequencyMins           : 30
+RefreshMode                    : Push
+ReportManagers                 : {[ReportServerWeb]ReportServerWeb}
+ResourceModuleManagers         : {}
+PSComputerName                 : v26267ncec202
+PSComputerName                 : v26267ncec202
+
+
+
+PS E:\CHIZ\DSC\Try2\DscWorkshop\DSC>

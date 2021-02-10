@@ -1,0 +1,11 @@
+Configurations:
+  - RegistryValues
+
+RegistryValues:
+    Values:
+    - Key: HKEY_LOCAL_MACHINE\SOFTWARE\Dsc
+      ValueName: FireSection
+      ValueData: 1
+      ValueType: DWORD
+      Ensure: Present
+      Force: true

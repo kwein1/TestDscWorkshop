@@ -1,0 +1,55 @@
+Configurations:
+  - SecurityBase
+  - WindowsFeatures
+  - NetworkIpConfiguration
+  - ChocolateyPackages
+  - RegistryValues
+
+# This does not need to be done as an array, even though it will take an array
+ChocolateyPackages:
+  Software:
+    Ensure: Present
+  Sources:
+    Name: ORDChoco
+    Ensure: Present
+    Source: '\\V26265NCHH500\ORDChoco'
+#    Source: '\\V26265NCHH500\chiz$\software installs and downloads\ChocolateyPackages'
+  Features:
+    Name: useFipsCompliantChecksums
+    Ensure: Present
+  Packages:
+    - Name: encase
+      Ensure: Present
+      ChocolateyOptions:
+        Source: ORDChoco
+    - Name: sccm
+      Ensure: Present
+      ChocolateyOptions:
+        Source: ORDChoco
+    - Name: bigfix
+      Ensure: Present
+      ChocolateyOptions:
+        Source: ORDChoco
+
+WindowsFeatures:
+  Name:
+    - -Telnet-Client
+
+SecurityBase:
+  Role: Baseline
+
+NetworkIpConfiguration:
+  Prefix: 24
+  Gateway: 192.168.111.51
+  DnsServer: ['134.67.208.5', '161.80.76.28']
+  InterfaceAlias: Production
+  DisableNetbios: True
+
+RegistryValues:
+  Values:
+    - Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+      ValueName: NtpServer
+      ValueData: pool.ntp.org,0x9
+      ValueType: String
+      Ensure: Present
+      Force: true

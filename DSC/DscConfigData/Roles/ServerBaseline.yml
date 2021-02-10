@@ -1,7 +1,10 @@
 Configurations:
   - SecurityBase
   - WindowsFeatures
-  - NetworkIpConfiguration
+  #- NetworkIpConfiguration
+  #- MSFT_xIPAddress
+  #- NetIPInterface
+  - IpConfiguration
   - ChocolateyPackages
   - RegistryValues
 
@@ -38,15 +41,40 @@ WindowsFeatures:
   Name:
     - -Telnet-Client
 
+MSFT_xIPAddress:
+  IpAddress: 127.0.0.1
+  Prefix: 24
+#  Gateway: 192.168.111.51
+  DnsServer: ['134.67.208.5', '161.80.76.28']
+  InterfaceAlias: Production
+#  DisableNetbios: True
+
+#NetIPInterface:
+#  IpAddress: 127.0.0.1
+#  Prefix: 24
+#  Gateway: 192.168.111.51
+#  DnsServer: ['134.67.208.5', '161.80.76.28']
+#  InterfaceAlias: Production
+
 SecurityBase:
   Role: Baseline
 
-NetworkIpConfiguration:
-  Prefix: 24
-  Gateway: 192.168.111.51
-  DnsServer: ['134.67.208.5', '161.80.76.28']
-  InterfaceAlias: Production
-  DisableNetbios: True
+IpConfiguration:
+  Adapter:
+    - NewName: Production
+      AddressFamily: IPv4
+      GatewayAddress: 192.168.111.51
+      DnsServerAddress:
+        - 134.67.208.5
+        - 161.80.76.28
+      #DisableIpv6: true
+
+#NetworkIpConfiguration:
+#  Prefix: 24
+#  Gateway: 192.168.111.51
+#  DnsServer: ['134.67.208.5', '161.80.76.28']
+#  InterfaceAlias: Production
+#  DisableNetbios: True
 
 RegistryValues:
   Values:

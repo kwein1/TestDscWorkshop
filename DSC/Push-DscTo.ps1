@@ -2,7 +2,7 @@
 .SYNOPSIS
     Push pre-built DSC config to target server
 .TITLE
-    Get-DscTo.ps1
+    Push-DscTo.ps1
 .DESCRIPTION
 	Force target server into new DSC config
 .PARAMETERS
@@ -37,8 +37,12 @@ Get-DscLocalConfigurationManager -CimSession $cimsessionTarget
 if (!(get-variable pssessionTarget -erroraction SilentlyContinue) -or ($pssessionTarget.state -ne 'open')) {
 	$pssessionTarget = New-PSSession $Computer
 }
+#"Here are the WithModule modules"
+#Get-ModuleFromFolder c:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules
+#"End modules"
+
 Push-DscConfiguration -session $pssessionTarget -MOF $SourceRoot\BuildOutput\MOF\$Computer.mof `
- -DSCBuildOutputModules $SourceRoot\BuildOutput\ModulesNew -RemoteStagingPath C:\temp -Verbose `
+ -DSCBuildOutputModules $SourceRoot\BuildOutput\Modules -RemoteStagingPath C:\temp -Verbose `
  -WithModule (Get-ModuleFromFolder c:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules) -Confirm:$false
 
 # -WithModule (Get-ModuleFromFolder c:\users\kevin.weinrich\Documents\WindowsPowerShell\Modules) -Confirm:$false
