@@ -1,12 +1,13 @@
 Configurations:
   - SecurityBase
   - WindowsFeatures
-  #- NetworkIpConfiguration
-  #- MSFT_xIPAddress
   #- NetIPInterface
-  - IpConfiguration
-  - ChocolateyPackages
-  - RegistryValues
+  #- IpConfiguration
+#  - ChocolateyPackages
+#  - RegistryValues
+  #- NetworkIpConfiguration
+  - Interfaces
+  #- MSFT_xIPAddress
 
 # This does not need to be done as an array, even though it will take an array
 ChocolateyPackages:
@@ -49,12 +50,9 @@ MSFT_xIPAddress:
   InterfaceAlias: Production
 #  DisableNetbios: True
 
-#NetIPInterface:
-#  IpAddress: 127.0.0.1
-#  Prefix: 24
-#  Gateway: 192.168.111.51
-#  DnsServer: ['134.67.208.5', '161.80.76.28']
-#  InterfaceAlias: Production
+NetIPInterface:
+  InterfaceAlias: Ethernet1
+  AddressFamily: IPv4
 
 SecurityBase:
   Role: Baseline
@@ -69,11 +67,45 @@ IpConfiguration:
         - 161.80.76.28
       #DisableIpv6: true
 
+Interfaces:
+  - NetworkIpConfiguration:
+    - InterfaceAlias: Ethernet1
+      IpAddress: 172.16.2.141
+      Prefix: 24
+      Gateway: 172.16.2.1
+      DnsServer: 134.67.208.5
+      DisableNetbios: true
+  - NetworkIpConfiguration:
+    - InterfaceAlias: Production
+      IpAddress: 134.67.216.199
+      Prefix: 24
+      Gateway: 134.67.216.1
+      DnsServer: 161.80.76.28
+
 #NetworkIpConfiguration:
+#  Interfaces:
+#    - InterfaceAlias: Ethernet1
+#      IpAddress: 172.16.2.141
+#      Prefix: 24
+#      Gateway: 172.16.2.1
+#      DnsServer: 134.67.208.5
+#      DisableNetbios: true
+#    - InterfaceAlias: Production
+#      IpAddress: 134.67.216.199
+#      Prefix: 24
+#      Gateway: 134.67.216.1
+#      DnsServer: 161.80.76.28
+
+#      DnsServer:
+#        - 134.67.208.5
+#        - 161.80.76.28
+
+#NetworkIpConfiguration:
+#  IPAddress: 192.168.0.11
 #  Prefix: 24
-#  Gateway: 192.168.111.51
+#  Gateway: 192.168.0.1
 #  DnsServer: ['134.67.208.5', '161.80.76.28']
-#  InterfaceAlias: Production
+#  InterfaceAlias: Ethernet1
 #  DisableNetbios: True
 
 RegistryValues:
