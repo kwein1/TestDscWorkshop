@@ -1,8 +1,0 @@
-Configurations:
-  - ChocolateyPackages
-
-# This does not need to be done as an array, even though it will take an array
-ChocolateyPackages:
-  Features:
-    Name: useFipsCompliantChecksums
-    Ensure: Present

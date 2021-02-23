@@ -1,3 +1,0 @@
-# English strings
-ConvertFrom-StringData @'
-'@
