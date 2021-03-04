@@ -15,7 +15,7 @@
 #>
 
 [CmdletBinding()]
-Param([string]$SourceRoot = 'e:\chiz\dsc\Try2\DscWorkshop\DSC'
+Param([string]$SourceRoot = '.' # 'e:\chiz\dsc\Try2\DscWorkshop\DSC'
 	,[string]$Computer = 'v26267ncec201'
 )
 # StrictMode has to come after CmdletBinding

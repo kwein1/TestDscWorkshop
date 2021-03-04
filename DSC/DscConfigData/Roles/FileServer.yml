@@ -1,5 +1,5 @@
 Configurations:
-  - FilesAndFolders
+  #- FilesAndFolders
   - SecurityBase
   - WindowsFeatures
 
@@ -7,21 +7,21 @@ WindowsFeatures:
   Name:
     - File-Services
 
-FilesAndFolders:
-  Items:
-    - DestinationPath: C:\Test
-      Type: Directory
-    - DestinationPath: C:\Test\Test1File1.txt
-      Type: File
-      Contents: Some test data
-      DependsOn: '[File]C\Test'
-    - DestinationPath: C:\Test\Test1File2.txt
-      Type: File
-      Contents: Some test data
-      DependsOn: '[File]C\Test'
-    - DestinationPath: C:\GpoBackup
-      SourcePath: \\DSCDC01\SYSVOL\contoso.com\Policies
-      Type: Directory
+# FilesAndFolders:
+#   Items:
+#     - DestinationPath: C:\Test
+#       Type: Directory
+#     - DestinationPath: C:\Test\Test1File1.txt
+#       Type: File
+#       Contents: Some test data
+#       DependsOn: '[File]C\Test'
+#     - DestinationPath: C:\Test\Test1File2.txt
+#       Type: File
+#       Contents: Some test data
+#       DependsOn: '[File]C\Test'
+#     - DestinationPath: C:\GpoBackup
+#       SourcePath: \\DSCDC01\SYSVOL\contoso.com\Policies
+#       Type: Directory
 
 SecurityBase:
   Role: FileServer

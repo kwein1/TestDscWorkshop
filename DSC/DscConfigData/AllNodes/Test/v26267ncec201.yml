@@ -1,0 +1,56 @@
+NodeName: v26267ncec201
+Environment: Test
+Role: FileServer
+Description: '[Command=(Import-Csv -Path $env:BHProjectPath\DscConfigData\ExternalData.csv -Delimiter ";" | Where-Object ComputerName -eq v26267ncec201).Description]'
+Location: RTP
+
+NetworkIpConfiguration:
+  Interfaces:
+    #- InterfaceAlias: Ethernet1
+    #  IpAddress: 172.16.2.14
+    #  Prefix: 24
+    #  Gateway: 172.16.2.1
+    #  DnsServer: 134.67.208.5
+    #  DisableNetbios: true
+    - InterfaceAlias: Production
+      IpAddress: 134.67.216.198
+      Prefix: 24
+      Gateway: 134.67.216.1
+      DnsServer: 161.80.76.28
+
+# INterfaceAlias pulled from Get-NetIPAddress:
+# This is required, so that the default is overridden
+# IpConfiguration:
+#   Adapter:
+#     - NewName: Production
+#       AddressFamily: IPv4
+#       IPAddress: 134.67.216.198/24
+#       GatewayAddress: 134.67.216.1
+#     - NewName: Ethernet1
+#       AddressFamily: IPv4
+#       IPAddress: 172.16.2.140/24
+#       GatewayAddress: 172.16.2.1
+
+    #- MacAddress: 00-17-FB-00-00-0A
+      #DnsServerAddress:
+      #  - 1.2.3.4
+      #  - 2.3.4.5
+      #DisableIpv6: true
+
+  #Adapter:
+  #  - InterfaceAlias: Production
+  #    IpAddress: 134.67.216.198
+  #    Gateway: 134.67.216.1
+#IpConfiguration:
+#  IpAddress: 172.16.2.140
+#  Gateway: 172.16.2.1
+  # Pulled from Get-NetIPAddress:
+#  InterfaceAlias: Ethernet1
+
+PSDscAllowPlainTextPassword: True
+PSDscAllowDomainUser: True
+
+LcmConfig:
+  ConfigurationRepositoryWeb:
+    Server:
+      ConfigurationNames: v26267ncec201

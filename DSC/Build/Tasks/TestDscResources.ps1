@@ -14,7 +14,7 @@ task TestDscResources {
         }
         $resources = dir -Path "$($m.ModuleBase)\DscResources"
         $resourceCount = $resources.Count
-        Write-Host "ResourceCount $resourceCount"
+        Write-Host "ResourceCount $resourceCount in ModuleBase $($m.ModuleBase)\DscResources"
 
         $maxIterations = 5
         while ($resourceCount -ne (Get-DscResource -Module CommonTasks).Count -and $maxIterations -gt 0) {

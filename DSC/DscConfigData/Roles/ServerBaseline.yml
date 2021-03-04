@@ -3,7 +3,7 @@ Configurations:
   - WindowsFeatures
   #- NetIPInterface
   #- IpConfiguration
-#  - ChocolateyPackages
+  - ChocolateyPackages
 #  - RegistryValues
   - NetworkIpConfiguration
   #- Interfaces
