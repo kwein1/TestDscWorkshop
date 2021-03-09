@@ -6,12 +6,12 @@ Location: RTP
 
 NetworkIpConfiguration:
   Interfaces:
-    #- InterfaceAlias: Ethernet1
-    #  IpAddress: 172.16.2.14
-    #  Prefix: 24
-    #  Gateway: 172.16.2.1
-    #  DnsServer: 134.67.208.5
-    #  DisableNetbios: true
+    - InterfaceAlias: Ethernet1
+      IpAddress: 172.16.2.140
+      Prefix: 24
+      Gateway: 172.16.2.1
+      DnsServer: 134.67.208.5
+      DisableNetbios: true
     - InterfaceAlias: Production
       IpAddress: 134.67.216.198
       Prefix: 24

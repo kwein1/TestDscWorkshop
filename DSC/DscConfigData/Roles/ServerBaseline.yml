@@ -38,34 +38,43 @@ ChocolateyPackages:
       ChocolateyOptions:
         Source: ORDChoco
 
+NetworkIpConfiguration:
+  Interfaces:
+    - InterfaceAlias: Ethernet1
+      IpAddress: 172.16.2.88
+      Prefix: 24
+      Gateway: 172.16.2.1
+      DnsServer: 134.67.208.5
+      DisableNetbios: true
+    - InterfaceAlias: Production
+      IpAddress: 134.67.216.88
+      Prefix: 24
+      Gateway: 134.67.216.1
+      DnsServer: 161.80.76.28
+
 WindowsFeatures:
   Name:
     - -Telnet-Client
 
-MSFT_xIPAddress:
-  IpAddress: 127.0.0.1
-  Prefix: 24
-#  Gateway: 192.168.111.51
-  DnsServer: ['134.67.208.5', '161.80.76.28']
-  InterfaceAlias: Production
-#  DisableNetbios: True
-
-NetIPInterface:
-  InterfaceAlias: Ethernet1
-  AddressFamily: IPv4
-
 SecurityBase:
   Role: Baseline
 
-IpConfiguration:
-  Adapter:
-    - NewName: Production
-      AddressFamily: IPv4
-      GatewayAddress: 192.168.111.51
-      DnsServerAddress:
-        - 134.67.208.5
-        - 161.80.76.28
-      #DisableIpv6: true
+# IpConfiguration:
+#   Adapter:
+#     - NewName: Production
+#       AddressFamily: IPv4
+#       GatewayAddress: 192.168.111.51
+#       DnsServerAddress:
+#         - 134.67.208.5
+#         - 161.80.76.28
+#       #DisableIpv6: true
+#     - NewName: Ethernet1
+#       AddressFamily: IPv4
+#       GatewayAddress: 192.168.111.51
+#       DnsServerAddress:
+#         - 134.67.208.5
+#         - 161.80.76.28
+#       #DisableIpv6: true
 
 # Interfaces:
 #   - NetworkIpConfiguration:
@@ -81,20 +90,6 @@ IpConfiguration:
 #       Prefix: 24
 #       Gateway: 134.67.216.1
 #       DnsServer: 161.80.76.28
-
-NetworkIpConfiguration:
-  Interfaces:
-    - InterfaceAlias: Ethernet1
-      IpAddress: 172.16.2.141
-      Prefix: 24
-      Gateway: 172.16.2.1
-      DnsServer: 134.67.208.5
-      DisableNetbios: true
-    - InterfaceAlias: Production
-      IpAddress: 134.67.216.199
-      Prefix: 24
-      Gateway: 134.67.216.1
-      DnsServer: 161.80.76.28
 
 #      DnsServer:
 #        - 134.67.208.5
